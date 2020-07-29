@@ -1,0 +1,109 @@
+//body
+$ff-body: 'Merriweather Sans', sans-serif;
+$fz-body: 14px;
+$lh-body: 24px;
+$fw-body: 300;
+$color-body: #fff;
+$bg-color-body: #222222;
+//body: END
+
+// section-padding
+$p-section: 80px 0;
+$p-section-laptop: 60px 0;
+$p-section-tablet: 50px 0;
+$p-section-mobile: 30px 0;
+// section-padding: END
+
+// color
+$color-headlines: #fff;
+$color-paragraph: #333;
+$color-links: #fff;
+$color-links-hover: pink;
+// color: END
+
+// text style
+// headlines
+$ff-headlines: 'Merriweather Sans', sans-serif;
+
+//h1
+$fw-h1: 600;
+$fz-h1: 60px;
+$lh-h1: 70px;
+//h1 laptop
+$fz-h1-laptop: 50px;
+$lh-h1-laptop: 60px;
+//h1 tablet
+$fz-h1-tablet: 40px;
+$lh-h1-tablet: 50px;
+//h1 mobile
+$fz-h1-mobile: 30px;
+$lh-h1-mobile: 20px;
+
+//h2
+$fw-h2: 400;
+$fz-h2: 50px;
+$lh-h2: 60px;
+//h2 laptop
+$fz-h2-laptop: 40px;
+$lh-h2-laptop: 50px;
+//h2 tablet
+$fz-h2-tablet: 30px;
+$lh-h2-tablet: 40px;
+//h2 mobile
+$fz-h2-mobile: 20px;
+$lh-h2-mobile: 30px;
+
+//h3
+$fw-h3: 400;
+$fz-h3: 40px;
+$lh-h3: 50px;
+//h3 laptop
+$fz-h3-laptop: 30px;
+$lh-h3-laptop: 40px;
+//h3 tablet
+$fz-h3-tablet: 30px;
+$lh-h3-tablet: 40px;
+//h3 mobile
+$fz-h3-mobile: 50px;
+$lh-h3-mobile: 60px;
+
+//h4
+$fw-h4: 300;
+$fz-h4: 20px;
+$lh-h4: 30px;
+//h4 laptop
+$fz-h4-laptop: 50px;
+$lh-h4-laptop: 60px;
+//h4 tablet
+$fz-h4-tablet: 40px;
+$lh-h4-tablet: 50px;
+//h4 mobile
+$fz-h4-mobile: 50px;
+$lh-h4-mobile: 60px;
+
+//links
+$ff-links: 'Open Sans', sans-serif;
+$fw-links: 300;
+$fz-links: 18px;
+$lh-links: 28px;
+
+//paragraph
+$ff-paragraph: 'Open Sans', sans-serif;
+$fz-paragraph: 18px;
+$lh-paragraph: 28px;
+// text style: END
+
+
+//pushy-style
+$pushy-width: 360px;
+$pushy-min-height: 580px;
+$pushy-bg: red;
+//pushy-style:end
+
+//md-modal
+$bg-overlay: rgba(143,27,15,0.8);
+$max-width-modal-1: 630px;
+$min-width-modal-1: 320px;
+$color-modal-1: #ffffff;
+$bg-modal-1: #e74c3c;
+//md-modal:end

@@ -1,0 +1,104 @@
+button.menu-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  span {
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #ffffff;
+    margin-left: 30px;
+    display: block;
+    &+ span {
+      margin-top: 5px;
+    }
+  }
+}
+
+.pushy a.close{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 1;
+  text-align: right;
+  padding: 15px 0;
+  span {
+    width: 30px;
+    height: 1px;
+    background-color: #b3b3b3;
+    display: block;
+    &:first-child{
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:last-child{
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin-top: -1px;
+    }
+  }
+}
+
+/* pushy style */
+.pushy {
+  position: fixed;
+  width: $pushy-width;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  background: $pushy-bg;
+  overflow: auto;
+}
+.pushy .pushy-content{
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: $pushy-min-height;
+  align-items: center;
+}
+
+.pushy-left{
+  transform: translate3d(-$pushy-width,0,0);
+}
+.pushy-open-left #container,
+.pushy-open-left .push {
+  transform: translate3d($pushy-width, 0, 0);
+}
+.pushy ul{
+  margin-top: 80px;
+}
+.pushy li a{
+  display: block;
+  position: relative;
+  //color: $white;
+  padding: 19px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+}
+.pushy li a:hover{
+  color: #ffffff;
+}
+.pushy li a:hover:before{
+  content: '';
+  width: 30px;
+  height: 6px;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 28px;
+  left: -33px;
+}
+.pushy li:first-child a{
+  font-size: 40px;
+}
+.pushy li:nth-child(2) a{
+  font-size: 32px;
+}
+.pushy li a:hover{
+  color: #ffffff
+}
+/* pushy style : END ================================= */
