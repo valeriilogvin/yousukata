@@ -1,22 +1,35 @@
 .header-top{
   position: absolute;
+  z-index: 1;
   background: rgba(66,73,89,.5);
   width: 100%;
   text-align: center;
   p{
+    line-height: 40px;
     font-weight: 400;
     text-transform: uppercase;
   }
 }
 .header{
   position: absolute;
-  top: 50px ;
+  z-index: 1;
+  top: 68px;
+  left: 50%;
+  transform: translateX(-50%);
   .conteiner{
     align-items: center;
   }
-  ul{
+  a.logo{
+    display: inherit;
+  }
+  ul.navbar{
     margin-left: auto;
+    padding: 0;
+    &>li{
+      position: relative;
+    }
     li{
+      padding: 10px 0;
       &+li{
         margin-left: 30px;
       }
@@ -25,35 +38,281 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         line-height: 26px;
+        &:hover{
+          color: #e10031;
+        }
+      }
+      ul.submenu {
+        display: block;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        visibility: hidden;
+        width: 180px;
+        opacity: 0;
+        z-index: 5;
+        -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        transform: translateY(10px);
+        -webkit-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        li{
+          background: rgba(22,24,30,.8);
+          padding: 0 15px;
+          margin-left: -15px;
+          display: block;
+          &+li{
+            margin:5px 0 0 -15px;
+          }
+          a{
+            width: 100%;
+            line-height: 45px;
+          }
+        }
+      }
+      &:hover{
+        ul.submenu {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
   }
   a.button{
     margin-left: 50px;
-    color: #b20027;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
+  }
+  div.language{
+    padding: 7px 20px 7px 55px;
+    position: relative;
+    &:after,
+    &:before{
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 5px;
+      top: 42%;
+
+      background: #757577;
+      transform: translateY(-50%);
+    }
+    &:before{
+      right: 3px;
+      transform:   rotate(-45deg);
+    }
+    &:after{
+      right: 0px;
+      transform:   rotate(45deg);
+    }
+    &:hover{
+      cursor: pointer;
+      .language_drop-down{
+        visibility: visible;
+        opacity: 1;
+        transition: all .5s ease;
+      }
+    }
+    .language_drop-down{
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      margin-left: -15px;
+      top: 35px;
+      a{
+        background: rgba(22,24,30, .8);
+        padding: 0 15px;
+        display: block;
+        &+a{
+          margin-top: 3px;
+        }
+      }
+    }
   }
 }
-.section1 {
-  display: flex;
-  align-items: center;
-  padding-top: 40px;
-  background: url("../img/bg.jpg") top center no-repeat;
-  background-size: cover;
-  height: 100vh;
-  h1{
-    text-transform: none;
-    font-size: 60px;
-    line-height: 70px;
-    font-weight: 900;
+.coupon{
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  right: -79px;
+  transform: translateY(-50%) rotate(-90deg);
+  background: rgba(178,0,39,.5);
+  span{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding: 0 28px;
   }
-  h2{
-    text-transform: none;
+  &:hover{
+    right: -74px;
+    padding-bottom: 10px;
+    span{
+      color: #ffffff;
+    }
+  }
+}
+.sect1{
+  padding: 0;
+  .slider1 {
+    outline: none;
+    display: flex !important;
+    align-items: center;
+    padding-top: 40px;
+    background: url("../img/bg.jpg") top center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    h1{
+      text-transform: none;
+      font-size: 60px;
+      line-height: 70px;
+      font-weight: 900;
+    }
+    h2{
+      text-transform: none;
+      padding: 15px 0 55px;
+      font-weight: 300;
+      font-size: 34px;
+      line-height: 44px;
+    }
+  }
+  .my-dots{
+    position: absolute;
+    bottom: 80px;
+    right: 50%;
+    transform: translateX(calc(-50% + 760px));
+    &:after{
+      opacity: .15;
+      position: absolute;
+      content: '';
+      width: 100px;
+      height: 4px;
+      background-color: #fff;
+      top: 50%;
+      left: -225px;
+      transform: translateY(-50%);
+    }
+    &:before{
+      opacity: .08;
+      position: absolute;
+      content: '';
+      width: 200px;
+      height: 4px;
+      background-color: #fff;
+      top: 50%;
+      left: -225px;
+      transform: translateY(-50%);
+    }
+    li{
+      display: inline-block;
+      &+li{
+        margin-left: 20px;
+      }
+      &.slick-active{
+        a{
+          color: #999999;
+        }
+      }
 
+    }
+    a.custom-dots{
+      font-weight: 900;
+      font-size: 16px;
+      color: #444444;
+
+      &:hover{
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.slick-dotted.slick-slider{
+  margin-bottom: 0;
+}
+
+@media (max-width: 1366px) {
+  .header a.logo {
+    img{
+      width: 100px;
+    }
+  }
+  .sect1 {
+    .my-dots {
+      transform: translateX(calc(-50% + 620px));
+    }
+    .slider1 {
+      h1 {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      h2 {
+        text-transform: none;
+        padding: 15px 0 55px;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .sect1 {
+    .my-dots {
+      transform: translateX(calc(-50% + 520px));
+    }
+  }
+
+}
+@media (max-width: 1024px) {
+
+  .header ul.navbar {
+    display: none;
+  }
+  .header{
+    .menu-btn.display_none{
+      display: block;
+    }
+  }
+  .header a.button {
+    margin-left: auto;
+  }
+  .sect1 {
+    .my-dots {
+      transform: translateX(-15%);
+    }
+  }
+  .sect1 .slider1 h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .sect1 .slider1 h2 {
+    padding: 15px 0 35px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .sect1 .slider1 h2 {
+    text-transform: none;
     font-weight: 300;
-    font-size: 34px;
-    line-height: 44px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+@media (max-width: 767px) {
+
+  .sect1 .my-dots {
+    transform: translateX(45px);
+  }
+}
+@media (max-width: 640px){
+.sect1 .my-dots {
+  transform: translateX(125px);
+}
+}
+@media (max-width: 480px){
+  .header a.button {
+    display: none;
+  }
+  .header-top p {
+    font-size: 14px;
   }
 }
