@@ -70,7 +70,8 @@ $lh-h3-tablet: 40px;
 //h3 mobile
 $fz-h3-mobile: 50px;
 $lh-h3-mobile: 60px;
-
+$widthContainer1480: 1320px;
+$halfWidthContainer1480: calc(-50% + 1320px/2 + 30px);
 //h4
 $fw-h4: 300;
 $fz-h4: 20px;

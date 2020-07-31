@@ -230,6 +230,13 @@
   margin-bottom: 0;
 }
 
+@media (max-width: 1480px) {
+  .sect1 {
+    .my-dots {
+      transform: translateX($halfWidthContainer1480);
+    }
+  }
+}
 @media (max-width: 1366px) {
   .header a.logo {
     img{
