@@ -417,9 +417,30 @@ button.menu-btn {
   width: 100%;
   text-align: center; }
   .header-top p {
+    font-size: 16px;
     line-height: 40px;
     font-weight: 400;
     text-transform: uppercase; }
+  .header-top a.close {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    opacity: 1;
+    text-align: right; }
+    .header-top a.close span {
+      width: 12px;
+      height: 3px;
+      background-color: #b3b3b3;
+      display: block; }
+      .header-top a.close span:first-child {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .header-top a.close span:last-child {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin-top: -3px; }
 
 .header {
   position: absolute;
@@ -452,6 +473,26 @@ button.menu-btn {
         line-height: 26px; }
         .header ul.navbar li a:hover {
           color: #e10031; }
+      .header ul.navbar li.parent-submenu:after, .header ul.navbar li.parent-submenu:before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 5px;
+        top: 46%;
+        background: #757577;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
+      .header ul.navbar li.parent-submenu:before {
+        right: -7px;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+      .header ul.navbar li.parent-submenu:after {
+        right: -10px;
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg); }
       .header ul.navbar li ul.submenu {
         display: block;
         position: absolute;
@@ -474,6 +515,8 @@ button.menu-btn {
           display: block; }
           .header ul.navbar li ul.submenu li + li {
             margin: 5px 0 0 -15px; }
+          .header ul.navbar li ul.submenu li:hover {
+            background: #16181e; }
           .header ul.navbar li ul.submenu li a {
             width: 100%;
             line-height: 45px; }
@@ -543,7 +586,8 @@ button.menu-btn {
     padding: 0 28px; }
   .coupon:hover {
     right: -74px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    background: #b20027; }
     .coupon:hover span {
       color: #ffffff; }
 
