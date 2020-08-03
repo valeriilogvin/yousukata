@@ -32,3 +32,7 @@ $(document).ready(function () {
 
 });
 
+$(".sect1 .my-dots").animate({
+    marginLeft : '20px',
+}, 1500 );
+

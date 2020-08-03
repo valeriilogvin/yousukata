@@ -31,3 +31,7 @@ $(document).ready(function () {
     })(jQuery);
 
 });
+
+$(".sect1 .my-dots").animate({
+    marginLeft : '20px',
+}, 1500 );
