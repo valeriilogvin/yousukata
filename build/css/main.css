@@ -175,6 +175,10 @@ section {
   margin: auto;
   padding: 0 20px; }
 
+@media (max-width: 1480px) {
+  .conteiner {
+    width: 1320px; } }
+
 @media (max-width: 1366px) {
   .conteiner {
     width: 1180px; } }
@@ -665,6 +669,12 @@ button.menu-btn {
 
 .slick-dotted.slick-slider {
   margin-bottom: 0; }
+
+@media (max-width: 1480px) {
+  .sect1 .my-dots {
+    -webkit-transform: translateX(-webkit-calc(-50% + 1320px/2 + 30px));
+        -ms-transform: translateX(calc(-50% + 1320px/2 + 30px));
+            transform: translateX(calc(-50% + 1320px/2 + 30px)); } }
 
 @media (max-width: 1366px) {
   .header a.logo img {
