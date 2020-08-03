@@ -32,6 +32,11 @@ $(document).ready(function () {
 
 });
 
-$(".sect1 .my-dots").animate({
-    marginLeft : '20px',
-}, 1500 );
+$(function(){
+    $('.pushy li.parent-submenu').click(function(){
+        $('li.parent-submenu ul.submenu').toggle('slow', function() {
+            $(this).toggleClass('expanded');
+        });
+    });
+});
+parent-submenu

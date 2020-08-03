@@ -432,15 +432,62 @@
   }
 }
 @media (max-width: 640px){
-.sect1 .my-dots {
-  transform: translateX(125px);
-}
+  .sect1 {
+    .slider1{
+      background: url("../img/bg-mob.jpg") bottom center no-repeat;
+      background-size: cover;
+      .conteiner{
+        margin: 100px auto auto;
+      }
+      h1 {
+        font-size: 28px;
+        line-height: 38px;
+      }
+      h2 {
+        text-transform: none;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    .my-dots{
+      bottom: 40px;
+    }
+  }
+  .container-arrow{
+    bottom: 40px;
+  }
+  .sect1 .my-dots {
+    transform: translateX(-50%);
+    left: 50%;
+    right: auto;
+    &:before,
+    &:after{
+      display: none;
+    }
+  }
 }
 @media (max-width: 480px){
-  .header a.button {
+  .header .language {
     display: none;
+  }
+  .header a.button {
+    font-size: 16px;
+    line-height: 26px;
   }
   .header-top p {
     font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .header-top p {
+    font-size: 12px;
+  }
+  .header a.logo img {
+    width: 80px;
+  }
+  .header a.button {
+    font-size: 14px;
+    line-height: 22px;
   }
 }
