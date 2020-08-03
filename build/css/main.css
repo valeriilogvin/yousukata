@@ -595,8 +595,98 @@ button.menu-btn {
     .coupon:hover span {
       color: #ffffff; }
 
+.arrow-bottom {
+  position: absolute;
+  bottom: 100px;
+  z-index: 2;
+  left: 40px;
+  width: 24px;
+  height: 24px; }
+  .arrow-bottom .chevron {
+    position: absolute;
+    width: 28px;
+    height: 10px;
+    opacity: 0;
+    -webkit-transform: scale3d(0.5, 0.5, 0.5);
+            transform: scale3d(0.5, 0.5, 0.5);
+    -webkit-animation: move 3s ease-out infinite;
+            animation: move 3s ease-out infinite; }
+  .arrow-bottom .chevron:first-child {
+    -webkit-animation: move 3s ease-out 1s infinite;
+            animation: move 3s ease-out 1s infinite; }
+  .arrow-bottom .chevron:nth-child(2) {
+    -webkit-animation: move 3s ease-out 2s infinite;
+            animation: move 3s ease-out 2s infinite; }
+  .arrow-bottom .chevron:before,
+  .arrow-bottom .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff; }
+  .arrow-bottom .chevron:before {
+    left: 0;
+    -webkit-transform: skew(0deg, 40deg);
+        -ms-transform: skew(0deg, 40deg);
+            transform: skew(0deg, 40deg); }
+  .arrow-bottom .chevron:after {
+    right: 0;
+    width: 50%;
+    -webkit-transform: skew(0deg, -40deg);
+        -ms-transform: skew(0deg, -40deg);
+            transform: skew(0deg, -40deg); }
+
+@-webkit-keyframes move {
+  25% {
+    opacity: 1; }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  67% {
+    opacity: 1;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+            transform: translateY(55px) scale3d(0.5, 0.5, 0.5); } }
+
+@keyframes move {
+  25% {
+    opacity: 1; }
+  33% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  67% {
+    opacity: 1;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+            transform: translateY(55px) scale3d(0.5, 0.5, 0.5); } }
+
+@-webkit-keyframes pulse {
+  to {
+    opacity: 1; } }
+
+@keyframes pulse {
+  to {
+    opacity: 1; } }
+
 .sect1 {
   padding: 0; }
+  .sect1:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #000000; }
   .sect1 .slider1 {
     outline: none;
     display: -webkit-box !important;
