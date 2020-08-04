@@ -4,6 +4,9 @@
   background: rgba(66,73,89,.5);
   width: 100%;
   text-align: center;
+  .conteiner{
+    position: relative;
+  }
   p{
     font-size: 16px;
     line-height: 40px;
@@ -13,7 +16,7 @@
   a.close{
     position: absolute;
     top: 18px;
-    right: 25px;
+    right: 16px;
     opacity: 1;
     text-align: right;
     span {
@@ -203,76 +206,45 @@
     }
   }
 }
-
 .container-arrow{
   position: absolute;
   bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  .arrow-bottom{
+  .arrow{
     position: absolute;
-    z-index: 2;
-    left: 20px;
-    width: 24px;
-    bottom: 40px;
-    height: 24px;
-
-    .chevron {
-      position: absolute;
-      width: 28px;
-      height: 10px;
-      opacity: 0;
-      transform: scale3d(0.5, 0.5, 0.5);
-      animation: move 3s ease-out infinite;
-    }
-
-    .chevron:first-child {
-      animation: move 3s ease-out 1s infinite;
-    }
-
-    .chevron:nth-child(2) {
-      animation: move 3s ease-out 2s infinite;
-    }
-
-    .chevron:before,
-    .chevron:after {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 51%;
-      background: #fff;
-    }
-
-    .chevron:before {
-      left: 0;
-      transform: skew(0deg, 40deg);
-    }
-
-    .chevron:after {
-      right: 0;
-      width: 50%;
-      transform: skew(0deg, -40deg);
-    }
-
-    @keyframes move {
-      25% {
-        opacity: 1;
+    bottom: 50px;
+    span{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-bottom: 10px solid #cccccc;
+      border-right: 10px solid #cccccc;
+      transform: rotate(45deg);
+      margin: -10px;
+      animation: animate-bottom-arrow 2s infinite;
+      &:nth-child(2){
+        animation-delay: -0.3s;
       }
-      50% {
-        opacity: 1;
-        transform: translateY(35px);
-      }
-      100% {
+    }
+    @keyframes animate-bottom-arrow {
+      0%{
         opacity: 0;
-        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+        transform: rotate(45deg) translate(-20px,-20px);
+      }
+      50%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
       }
     }
   }
-}
 
-.sect1{
+}
+.sect1-slick{
   padding: 0;
   .slider1 {
     outline: none;
@@ -295,34 +267,53 @@
       font-size: 34px;
       line-height: 44px;
     }
+    &.slick-active{
+      .slider-lines{
+        .front{
+          width: 100%;
+          -webkit-transition: width 4s ease;
+          -o-transition: width 4s ease;
+          transition: width 4s ease;
+          -webkit-transition-delay: .4s;
+          -o-transition-delay: .4s;
+          transition-delay: .4s;
+        }
+      }
+    }
+    .conteiner-bottom{
+      position: absolute;
+      bottom: 96px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .slider-lines{
+      position: absolute;
+      bottom: 0;
+      right: 140px;
+      width: 200px;
+      .front{
+        opacity: .15;
+        position: absolute;
+        content: '';
+        height: 4px;
+        background-color: #fff;
+        width: 0;
+      }
+      .back{
+        opacity: .08;
+        position: absolute;
+        content: '';
+        width: inherit;
+        height: 4px;
+        background-color: #fff;
+      }
+    }
   }
   .my-dots{
     position: absolute;
     bottom: 80px;
     right: 50%;
     transform: translateX(calc(-50% + 760px));
-    &:after{
-      opacity: .15;
-      position: absolute;
-      content: '';
-      width: 100px;
-      height: 4px;
-      background-color: #fff;
-      top: 50%;
-      left: -225px;
-      transform: translateY(-50%);
-    }
-    &:before{
-      opacity: .08;
-      position: absolute;
-      content: '';
-      width: 200px;
-      height: 4px;
-      background-color: #fff;
-      top: 50%;
-      left: -225px;
-      transform: translateY(-50%);
-    }
     li{
       display: inline-block;
       &+li{
@@ -352,7 +343,7 @@
 }
 
 @media (max-width: 1480px) {
-  .sect1 {
+  .sect1-slick {
     .my-dots {
       transform: translateX($halfWidthContainer1480);
     }
@@ -364,7 +355,7 @@
       width: 100px;
     }
   }
-  .sect1 {
+  .sect1-slick {
     .my-dots {
       transform: translateX(calc(-50% + 620px));
     }
@@ -384,7 +375,7 @@
   }
 }
 @media (max-width: 1280px) {
-  .sect1 {
+  .sect1-slick {
     .my-dots {
       transform: translateX(calc(-50% + 520px));
     }
@@ -404,21 +395,21 @@
   .header a.button {
     margin-left: auto;
   }
-  .sect1 {
+  .sect1-slick {
     .my-dots {
       transform: translateX(-15%);
     }
   }
-  .sect1 .slider1 h1 {
+  .sect1-slick .slider1 h1 {
     font-size: 40px;
     line-height: 50px;
   }
-  .sect1 .slider1 h2 {
+  .sect1-slick .slider1 h2 {
     padding: 15px 0 35px;
     font-size: 24px;
     line-height: 34px;
   }
-  .sect1 .slider1 h2 {
+  .sect1-slick .slider1 h2 {
     text-transform: none;
     font-weight: 300;
     font-size: 24px;
@@ -427,12 +418,12 @@
 }
 @media (max-width: 767px) {
 
-  .sect1 .my-dots {
+  .sect1-slick .my-dots {
     transform: translateX(45px);
   }
 }
 @media (max-width: 640px){
-  .sect1 {
+  .sect1-slick {
     .slider1{
       background: url("../img/bg-mob.jpg") bottom center no-repeat;
       background-size: cover;
@@ -457,7 +448,7 @@
   .container-arrow{
     bottom: 40px;
   }
-  .sect1 .my-dots {
+  .sect1-slick .my-dots {
     transform: translateX(-50%);
     left: 50%;
     right: auto;

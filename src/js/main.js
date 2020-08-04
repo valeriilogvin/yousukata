@@ -1,11 +1,13 @@
 //slick-slider settings
-$('.sect1').slick({
+$('.sect1-slick').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
+    cssEase: 'linear',
     arrows: false,
     dots: true,
     dotsClass: 'my-dots',
-    infinite: false,
+    infinite: true,
     autoplay: true,
     autoplaySpeed: 4000,
     customPaging: function (slider, i) {
@@ -14,7 +16,7 @@ $('.sect1').slick({
     },
 });
 
-// $('.sect1 .my-dots:after').animate({right: 20%, width:100},{duration:500, easing: easeOutExpo});
+// $('.sect1-slick .my-dots:after').animate({right: 20%, width:100},{duration:500, easing: easeOutExpo});
 
 $(document).ready(function () {
 
@@ -30,14 +32,15 @@ $(document).ready(function () {
         });
     })(jQuery);
 
-});
-
-$(function(){
-    $('.pushy li.parent-submenu').click(function(){
-        $('li.parent-submenu ul.submenu').toggle('slow', function() {
-            $(this).toggleClass('expanded');
+    // burger-menu appearance & hiding submenu
+    $(function(){
+        $('.pushy li.parent-submenu').click(function(){
+            $('li.parent-submenu ul.submenu').toggle('slow', function() {
+                $(this).toggleClass('expanded');
+            });
         });
     });
 });
-parent-submenu
+
+
 
