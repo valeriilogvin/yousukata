@@ -414,7 +414,7 @@
     line-height: 34px;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 1024px){
 
   .sect1-slick {
     .slider1{
@@ -456,9 +456,6 @@
       right: 0;
     }
   }
-}
-@media (max-width: 640px){
-
 }
 @media (max-width: 480px){
   .header .language {

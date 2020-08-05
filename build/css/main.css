@@ -95,7 +95,7 @@ a {
     text-decoration: none; }
 
 a.button {
-  margin-left: -10px;
+  margin-left: -15px;
   position: relative;
   color: #b20027;
   font-weight: 800;
@@ -126,8 +126,8 @@ a.button {
       bottom: 0;
       right: 0;
       content: '';
-      width: -webkit-calc(100% - 10px);
-      width: calc(100% - 10px);
+      width: -webkit-calc(100% - 15px);
+      width: calc(100% - 15px);
       height: 4px;
       background-color: #b20027; }
   a.button::before, a.button::after {
@@ -894,7 +894,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     font-size: 24px;
     line-height: 34px; } }
 
-@media (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   .sect1-slick .slider1 {
     background: url("../img/bg-mob.jpg") bottom center no-repeat;
     background-size: cover; }

@@ -52,7 +52,7 @@ a{
   }
 }
 a.button {
-  margin-left: -10px;
+  margin-left: -15px;
   position: relative;
   color: #b20027;
   font-weight: 800;
@@ -85,7 +85,7 @@ a.button {
       bottom: 0;
       right: 0;
       content: '';
-      width: calc(100% - 10px);
+      width: calc(100% - 15px);
       height: 4px;
       background-color: #b20027;
     }
