@@ -100,6 +100,7 @@ a.button {
   color: #b20027;
   font-weight: 800;
   font-size: 20px;
+  outline: none;
   line-height: 42px;
   padding: 0 15px; }
   a.button:hover {
@@ -933,16 +934,28 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     width: 110px; }
   .header-top p {
     font-size: 14px; }
-  .sect1-slick .slider1 .conteiner {
-    margin: 150px auto auto;
-    text-align: center; }
-  .sect1-slick .slider1 h1 {
-    font-size: 32px;
-    line-height: 42px; }
-  .sect1-slick .slider1 h2 {
-    padding: 10px 0 35px;
-    font-size: 18px;
-    line-height: 28px; } }
+  .sect1-slick .my-dots {
+    display: none !important; }
+  .sect1-slick .slider1 {
+    background: url("../img/bg-mob.jpg") bottom center no-repeat;
+    background-size: cover; }
+    .sect1-slick .slider1 .conteiner {
+      margin: 150px auto auto;
+      text-align: center; }
+    .sect1-slick .slider1 h1 {
+      font-size: 32px;
+      line-height: 42px; }
+    .sect1-slick .slider1 h2 {
+      padding: 10px 0 35px;
+      font-size: 18px;
+      line-height: 28px; }
+  .sect1-slick .slider1 .conteiner-bottom {
+    bottom: 0;
+    width: 100%; }
+  .sect1-slick .slider1 .slider-lines {
+    width: 100%;
+    bottom: 4px;
+    right: 0; } }
 
 @media (max-width: 380px) {
   .header-top p {
@@ -951,7 +964,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     width: 90px; }
   .header a.button {
     font-size: 14px;
-    line-height: 20px; }
+    line-height: 26px; }
   button.menu-btn span {
     margin-left: 10px; }
   .sect1-slick .slider1 h1 {

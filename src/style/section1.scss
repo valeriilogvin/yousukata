@@ -471,8 +471,13 @@
   .header-top p {
     font-size: 14px;
   }
+  .sect1-slick .my-dots {
+    display: none!important;
+  }
   .sect1-slick {
     .slider1{
+      background: url("../img/bg-mob.jpg") bottom center no-repeat;
+      background-size: cover;
       .conteiner{
         margin: 150px auto auto;
         text-align: center;
@@ -488,6 +493,17 @@
       }
     }
   }
+  .sect1-slick .slider1 {
+    .conteiner-bottom{
+      bottom: 0;
+      width: 100%;
+    }
+    .slider-lines{
+      width: 100%;
+      bottom: 4px;
+      right: 0;
+    }
+  }
 }
 @media (max-width: 380px){
   .header-top p {
@@ -498,7 +514,7 @@
   }
   .header a.button {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 26px;
   }
   button.menu-btn span{
     margin-left: 10px;
