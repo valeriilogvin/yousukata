@@ -49,6 +49,9 @@
   }
   a.logo{
     display: inherit;
+    &:focus{
+      margin-top: 5px;
+    }
   }
   ul.navbar{
     margin-left: auto;
@@ -217,10 +220,10 @@
     bottom: 50px;
     span{
       display: block;
-      width: 30px;
-      height: 30px;
-      border-bottom: 10px solid #cccccc;
-      border-right: 10px solid #cccccc;
+      width: 20px;
+      height: 20px;
+      border-bottom: 6px solid #cccccc;
+      border-right: 6px solid #cccccc;
       transform: rotate(45deg);
       margin: -10px;
       animation: animate-bottom-arrow 2s infinite;
@@ -440,7 +443,7 @@
     bottom: 40px;
   }
   .sect1-slick .my-dots {
-    display: none;
+    display: none!important;
   }
   .sect1-slick .slider1 {
     .conteiner-bottom{
@@ -487,9 +490,6 @@
         line-height: 28px;
       }
     }
-    .my-dots{
-      bottom: 40px;
-    }
   }
 }
 @media (max-width: 380px){
@@ -517,6 +517,9 @@
   a.button {
     font-size: 18px;
     line-height: 30px;
+  }
+  .coupon {
+    right: -73px;
   }
   .coupon span {
     font-size: 16px;
