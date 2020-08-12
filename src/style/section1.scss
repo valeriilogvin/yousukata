@@ -205,6 +205,9 @@
       color: #ffffff;
     }
   }
+  @media (max-width: 380px) {
+    right: -72px;
+  }
 }
 .container-arrow{
   position: absolute;
@@ -270,13 +273,7 @@
     &.slick-active{
       .slider-lines{
         .front{
-          width: 100%;
-          -webkit-transition: width 4s ease;
-          -o-transition: width 4s ease;
-          transition: width 4s ease;
-          -webkit-transition-delay: .4s;
-          -o-transition-delay: .4s;
-          transition-delay: .4s;
+          animation: categoryProgress 4300ms infinite linear both;
         }
       }
     }
@@ -309,11 +306,31 @@
       }
     }
   }
+  @keyframes categoryProgress {
+    from { width: 0; }
+    to { width: 100%;}
+  }
   .my-dots{
     position: absolute;
     bottom: 80px;
-    right: 50%;
-    transform: translateX(calc(-50% + 760px));
+    width: 1450px;
+    text-align: right;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    @media (max-width: 1600px){
+      width: 1300px;
+    }
+    @media (max-width: 1366px){
+      width: 1220px;
+    }
+    @media (max-width: 1280px){
+      width: 960px;
+    }
+    @media(max-width: 1024px){
+      width: 720px;
+      box-sizing: border-box;
+    }
     li{
       display: inline-block;
       &+li{
@@ -342,13 +359,6 @@
   margin-bottom: 0;
 }
 
-@media (max-width: 1480px) {
-  .sect1-slick {
-    .my-dots {
-      transform: translateX($halfWidthContainer1480);
-    }
-  }
-}
 @media (max-width: 1366px) {
   .header a.logo {
     img{
@@ -356,9 +366,6 @@
     }
   }
   .sect1-slick {
-    .my-dots {
-      transform: translateX(calc(-50% + 620px));
-    }
     .slider1 {
       h1 {
         font-size: 50px;
@@ -370,14 +377,6 @@
       }
     }
   }
-}
-@media (max-width: 1280px) {
-  .sect1-slick {
-    .my-dots {
-      transform: translateX(calc(-50% + 520px));
-    }
-  }
-
 }
 @media (max-width: 1024px) {
 
@@ -391,11 +390,6 @@
   }
   .header a.button {
     margin-left: auto;
-  }
-  .sect1-slick {
-    .my-dots {
-      transform: translateX(-15%);
-    }
   }
   .sect1-slick .slider1 h1 {
     font-size: 40px;
@@ -453,9 +447,6 @@
       right: 0;
     }
   }
-}
-@media (max-width: 640px){
-
 }
 @media (max-width: 480px){
   .header .language {

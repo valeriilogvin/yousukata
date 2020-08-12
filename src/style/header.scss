@@ -131,106 +131,27 @@ section{
   width: 1450px;
   margin:auto;
   padding:0 20px;
-}
-
-@media (max-width: 1480px){
-
-  .conteiner {
-    width: 1320px;
+  @media (max-width: 1600px){
+    width: 1300px;
   }
-}
-@media (max-width: 1366px){
-  .conteiner {
-    width: 1180px;
+  @media (max-width: 1366px){
+    width: 1220px;
   }
-}
-@media (max-width: 1280px) {
-  .conteiner {
-    width: 980px;
+  @media (max-width: 1280px){
+    width: 960px;
   }
-}
-@media(max-width: 1024px) {
-  section{
-    padding: $p-section-laptop;
+  @media(max-width: 1024px){
+    width: 720px;
+    box-sizing: border-box;
   }
-  .conteiner {
-    width: 740px;
+  @media (max-width: 768px){
+    width: 440px;
+    padding: 0 10px;
   }
-  h1{
-    font-size: $fz-h1-laptop;
-    line-height: $lh-h1-laptop;
-
+  @media (max-width: 479px){
+    width: 380px;
   }
-  h2{
-    font-size: $fz-h2-laptop;
-    line-height: $lh-h2-laptop;
-  }
-  h3{
-    font-size: $fz-h3-laptop;
-    line-height: $lh-h3-laptop;
-  }
-  h4{
-    font-size: $fz-h4-laptop;
-    line-height: $lh-h4-laptop;
-  }
-}
-@media (max-width: 767px) {
-  section{
-    padding: $p-section-tablet;
-  }
-  .conteiner {
-    width: 620px;
-  }
-  h1{
-    font-size: $fz-h1-tablet;
-    line-height: $lh-h1-tablet;
-
-  }
-  h2{
-    font-size: $fz-h2-tablet;
-    line-height: $lh-h2-tablet;
-  }
-  h3{
-    font-size: $fz-h3-tablet;
-    line-height: $lh-h3-tablet;
-  }
-  h4{
-    font-size: $fz-h4-tablet;
-    line-height: $lh-h4-tablet;
-  }
-}
-@media (max-width: 640px) {
-  .conteiner {
-    width: 460px;
-  }
-}
-@media (max-width: 479px) {
-  section{
-    padding: $p-section-mobile;
-  }
-  .conteiner {
-    width: 360px;
-  }
-  h1{
-    font-size: $fz-h1-mobile;
-    line-height: $lh-h1-mobile;
-
-  }
-  h2{
-    font-size: $fz-h2-mobile;
-    line-height: $lh-h2-mobile;
-  }
-  h3{
-    font-size: $fz-h3-mobile;
-    line-height: $lh-h3-mobile;
-  }
-  h4{
-    font-size: $fz-h4-mobile;
-    line-height: $lh-h4-mobile;
-  }
-}
-@media (max-width: 380px) {
-  .conteiner {
+  @media (max-width: 380px){
     width: 300px;
   }
 }
