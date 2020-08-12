@@ -3,7 +3,7 @@ $('.sect1-slick').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    cssEase: 'linear',
+    // cssEase: 'linear',
     arrows: false,
     dots: true,
     dotsClass: 'my-dots',
