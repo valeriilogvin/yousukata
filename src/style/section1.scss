@@ -1,3 +1,7 @@
+.sect1{
+  padding: 0;
+  position: relative;
+}
 .header-top{
   position: absolute;
   z-index: 1;
@@ -256,7 +260,7 @@
     outline: none;
     display: flex !important;
     align-items: center;
-    padding-top: 40px;
+    //padding-top: 40px;
     background: url("../img/bg.jpg") top center no-repeat;
     background-size: cover;
     height: 100vh;
@@ -276,7 +280,7 @@
     &.slick-active{
       .slider-lines{
         .front{
-          animation: categoryProgress 4300ms infinite linear both;
+          animation: categoryProgress 4500ms infinite linear both;
         }
       }
     }
@@ -361,7 +365,6 @@
 .slick-dotted.slick-slider{
   margin-bottom: 0;
 }
-
 @media (max-width: 1366px) {
   .header a.logo {
     img{
@@ -382,7 +385,6 @@
   }
 }
 @media (max-width: 1024px) {
-
   .header ul.navbar {
     display: none;
   }

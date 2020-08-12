@@ -1,19 +1,21 @@
-//slick-slider settings
-$('.sect1-slick').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    // cssEase: 'linear',
-    arrows: false,
-    dots: true,
-    dotsClass: 'my-dots',
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    customPaging: function (slider, i) {
-        // var thumb = $(slider.$slides[i]).data();
-        return '<a class="custom-dots">' + '0' + (i + 1) + '</a>';
-    },
+$(document).ready(function () {
+    //slick-slider settings
+    $('.sect1-slick').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        // cssEase: 'linear',
+        arrows: false,
+        dots: true,
+        dotsClass: 'my-dots',
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        customPaging: function (slider, i) {
+            // var thumb = $(slider.$slides[i]).data();
+            return '<a class="custom-dots">' + '0' + (i + 1) + '</a>';
+        },
+    });
 });
 
 // $('.sect1-slick .my-dots:after').animate({right: 20%, width:100},{duration:500, easing: easeOutExpo});
