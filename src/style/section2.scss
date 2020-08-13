@@ -1,0 +1,14 @@
+.sect2{
+  background: url("../img/sect2-bg.jpg") bottom center no-repeat;
+  h2{
+    color: #000000;
+  }
+  .flex{
+    .item{
+      &:nth-child(1){
+        width: 48%;
+        background: #ffedd9;
+      }
+    }
+  }
+}

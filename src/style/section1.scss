@@ -8,7 +8,7 @@
   background: rgba(66,73,89,.5);
   width: 100%;
   text-align: center;
-  .conteiner{
+  .container{
     position: relative;
   }
   p{
@@ -48,7 +48,7 @@
   top: 68px;
   left: 50%;
   transform: translateX(-50%);
-  .conteiner{
+  .container{
     align-items: center;
   }
   a.logo{
@@ -284,7 +284,7 @@
         }
       }
     }
-    .conteiner-bottom{
+    .container-bottom{
       position: absolute;
       bottom: 96px;
       left: 50%;
@@ -416,7 +416,7 @@
     .slider1{
       background: url("../img/bg-mob.jpg") bottom center no-repeat;
       background-size: cover;
-      .conteiner{
+      .container{
         margin: 170px auto auto;
         text-align: center;
       }
@@ -442,7 +442,7 @@
     display: none!important;
   }
   .sect1-slick .slider1 {
-    .conteiner-bottom{
+    .container-bottom{
       bottom: 0;
       width: 100%;
     }
@@ -474,7 +474,7 @@
     .slider1{
       background: url("../img/bg-mob.jpg") bottom center no-repeat;
       background-size: cover;
-      .conteiner{
+      .container{
         margin: 150px auto auto;
         text-align: center;
       }
@@ -490,7 +490,7 @@
     }
   }
   .sect1-slick .slider1 {
-    .conteiner-bottom{
+    .container-bottom{
       bottom: 0;
       width: 100%;
     }

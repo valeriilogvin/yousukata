@@ -11,12 +11,6 @@ $color-body: #fff;
 $bg-color-body: #222222;
 //body: END
 
-// section-padding
-$p-section: 80px 0;
-$p-section-laptop: 60px 0;
-$p-section-tablet: 50px 0;
-$p-section-mobile: 30px 0;
-// section-padding: END
 
 // color
 $color-headlines: #fff;
@@ -44,9 +38,9 @@ $fz-h1-mobile: 30px;
 $lh-h1-mobile: 20px;
 
 //h2
-$fw-h2: 400;
-$fz-h2: 50px;
-$lh-h2: 60px;
+$fw-h2: $black;
+$fz-h2: 30px;
+$lh-h2: 40px;
 //h2 laptop
 $fz-h2-laptop: 40px;
 $lh-h2-laptop: 50px;
@@ -59,7 +53,7 @@ $lh-h2-mobile: 30px;
 
 //h3
 $fw-h3: 400;
-$fz-h3: 40px;
+$fz-h3: 22px;
 $lh-h3: 50px;
 //h3 laptop
 $fz-h3-laptop: 30px;

@@ -3,14 +3,15 @@ $(document).ready(function () {
     $('.sect1-slick').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        fade: true,
-        // cssEase: 'linear',
         arrows: false,
         dots: true,
         dotsClass: 'my-dots',
         infinite: true,
         autoplay: true,
         autoplaySpeed: 4000,
+        fade: true,
+        cssEase: 'linear',
+        pauseOnHover:false,
         customPaging: function (slider, i) {
             // var thumb = $(slider.$slides[i]).data();
             return '<a class="custom-dots">' + '0' + (i + 1) + '</a>';
