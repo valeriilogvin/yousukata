@@ -101,6 +101,7 @@ a {
 a.button {
   margin-left: -15px;
   position: relative;
+  z-index: 1;
   color: #b20027;
   font-weight: 800;
   font-size: 20px;
@@ -169,6 +170,41 @@ a.button {
     -o-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
 
+a.button2 {
+  position: relative;
+  color: #b20027;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 34px;
+  padding-right: 10px;
+  border-right: 4px solid #b20027;
+  border-bottom: 4px solid #b20027; }
+
+a.button2:after {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  content: '';
+  width: 80%;
+  height: 4px;
+  background-color: #b20027; }
+
+a.button2:hover {
+  color: #000000;
+  border-right: 4px solid #000000;
+  border-bottom: 4px solid #000000; }
+
+a.button2:hover:after {
+  width: -webkit-calc(100% + 4px);
+  width: calc(100% + 4px);
+  background-color: #000000;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+
+section {
+  padding: 75px 0 140px; }
+
 /** headlines **/
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
@@ -211,6 +247,9 @@ h4 {
 
 .display_none {
   display: none; }
+
+.text-center {
+  text-align: center; }
 
 .container {
   width: 1450px;
@@ -945,9 +984,149 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     line-height: 36px; } }
 
 .sect2 {
-  background: url("../img/sect2-bg.jpg") bottom center no-repeat; }
+  background: url("../img/sect2-bg.jpg") bottom center no-repeat;
+  padding-bottom: 100px; }
   .sect2 h2 {
-    color: #000000; }
-  .sect2 .flex .item:nth-child(1) {
+    color: #000000;
+    padding-bottom: 60px; }
+  .sect2 .img-block {
+    background: url("../img/sect2-items-bg.png") bottom center no-repeat;
+    background-size: contain; }
+    .sect2 .img-block img {
+      width: 100%; }
+  .sect2 .item {
+    width: 25%; }
+    .sect2 .item h3 {
+      font-weight: 900;
+      line-height: 30px;
+      color: #000;
+      margin-bottom: 13px; }
+  .sect2 .deal_of_the_month {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     width: 48%;
-    background: #ffedd9; }
+    background: #ffedd9;
+    padding: 35px 40px; }
+    .sect2 .deal_of_the_month .img-block {
+      width: 50%; }
+    .sect2 .deal_of_the_month h2 {
+      padding-bottom: 0;
+      margin-bottom: 105px;
+      color: #ff6a00;
+      position: relative; }
+      .sect2 .deal_of_the_month h2:after {
+        position: absolute;
+        content: url("../img/deal_curve.png");
+        -webkit-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+                transform: translateY(100%);
+        bottom: 0;
+        left: -10px; }
+    .sect2 .deal_of_the_month .description {
+      width: 45%;
+      margin-left: 25px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .sect2 .deal_of_the_month .description .flex {
+        margin-top: auto;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+    .sect2 .deal_of_the_month span.price {
+      display: block;
+      font-weight: 900;
+      color: #ff2a00;
+      font-size: 27px; }
+    .sect2 .deal_of_the_month span.old-price {
+      margin-top: 10px;
+      line-height: 34px;
+      color: #444444;
+      display: block;
+      font-weight: 500;
+      font-size: 24px;
+      position: relative;
+      text-align: center; }
+      .sect2 .deal_of_the_month span.old-price:after {
+        background: #ff2a00;
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        width: 100px;
+        height: 2px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%); }
+  .sect2 .top_sales {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding: 35px 50px; }
+    .sect2 .top_sales h3 {
+      font-size: 16px;
+      margin-top: 35px; }
+    .sect2 .top_sales .flex {
+      width: 100%;
+      margin-top: auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .sect2 .top_sales .price {
+      font-weight: 500;
+      font-size: 24px;
+      color: #000; }
+    .sect2 .top_sales + .top_sales {
+      border-left: 1px solid #e5e5e5; }
+  .sect2 .text-center a.button2 {
+    margin-top: 120px; }
+
+.stars {
+  text-align: left; }
+  .stars .star {
+    display: inline-block;
+    vertical-align: top;
+    width: 14px;
+    height: 14px;
+    background: #d9d9d9;
+    position: relative; }
+    .stars .star:before {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      right: 1px;
+      background: #d9d9d9;
+      z-index: 1; }
+  .stars5 .star {
+    background: #ffa800; }
+    .stars5 .star:before {
+      background: #ffa800; }
+  .stars4 .star:nth-child(1), .stars4 .star:nth-child(2), .stars4 .star:nth-child(3), .stars4 .star:nth-child(4) {
+    background: #ffa800; }
+    .stars4 .star:nth-child(1):before, .stars4 .star:nth-child(2):before, .stars4 .star:nth-child(3):before, .stars4 .star:nth-child(4):before {
+      background: #ffa800; }
+
+.star,
+.star:before {
+  -webkit-clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%);
+  clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%); }

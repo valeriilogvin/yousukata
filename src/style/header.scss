@@ -57,6 +57,7 @@ a{
 a.button {
   margin-left: -15px;
   position: relative;
+  z-index: 1;
   color: #b20027;
   font-weight: 800;
   font-size: 20px;
@@ -148,6 +149,37 @@ a.button {
             height 0.25s ease-out 0.75s; // And finally height
   }
 }
+a.button2 {
+  position: relative;
+  color: #b20027;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 34px;
+  padding-right: 10px;
+  border-right: 4px solid #b20027;
+  border-bottom: 4px solid #b20027; }
+a.button2:after {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  content: '';
+  width: 80%;
+  height: 4px;
+  background-color: #b20027; }
+a.button2:hover {
+  color: #000000;
+  border-right: 4px solid #000000;
+  border-bottom: 4px solid #000000; }
+a.button2:hover:after {
+  width: -webkit-calc(100% + 4px);
+  width: calc(100% + 4px);
+  background-color: #000000;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+section{
+  padding: 75px 0 140px;
+}
 
 /** headlines **/
 h1, h2, h3, h4, h5, h6 {
@@ -188,6 +220,9 @@ h4{
 }
 .display_none{
   display: none;
+}
+.text-center{
+  text-align: center;
 }
 
 .container{
