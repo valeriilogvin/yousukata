@@ -14,7 +14,6 @@
     }
   }
   .item{
-    width: 25%;
     h3{
       font-weight: $black;
       line-height: 30px;
@@ -24,7 +23,6 @@
   }
   .deal_of_the_month{
     box-shadow: 0 1px 3px rgba(0,0,0,.5);
-    width: 48%;
     background: #ffedd9;
     padding: 35px 40px;
     .img-block{
@@ -117,8 +115,8 @@
     }
   }
   .text-center{
-    a.button2{
-      margin-top: 130px;
+    a.button{
+      margin-top: 120px;
     }
   }
 

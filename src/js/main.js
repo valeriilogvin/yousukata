@@ -17,6 +17,17 @@ $(document).ready(function () {
             return '<a class="custom-dots">' + '0' + (i + 1) + '</a>';
         },
     });
+    $('.sect4-slick').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // variableWidth: true,
+        arrows: false,
+        dots: true,
+        // infinite: true,
+        // fade: true,
+        // cssEase: 'linear',
+        // pauseOnHover:false,
+    });
 });
 
 // $('.sect1-slick .my-dots:after').animate({right: 20%, width:100},{duration:500, easing: easeOutExpo});
