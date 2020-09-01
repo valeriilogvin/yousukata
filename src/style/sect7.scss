@@ -1,0 +1,21 @@
+.sect7{
+  background: url("../img/coupon_bg.jpg") bottom center no-repeat;
+  background-size: cover;
+  padding: 75px 0 110px;
+  p{
+    font-weight: $black;
+    &.title {
+      color: #e10031;
+      font-size: 48px;
+      line-height: 80px;
+    }
+    &.text{
+      font-size: 30px;
+      line-height: 40px;
+      color: #fffefe;
+    }
+  }
+  a.button{
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,70 @@
+.sect6{
+  background: #ffffff;
+  color: #000000;
+  position: relative;
+  padding: 75px 0 80px;
+  h2{
+    color: #000000;
+    padding-bottom: 35px;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: url("../img/reviews_curve.png");
+      bottom: 22px;
+      left: -5px;
+    }
+  }
+  .shrimp{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .tomato{
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+  }
+  .parsley{
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+  }
+}
+.sect6-slick{
+  .slide{
+    box-sizing: border-box;
+    padding: 50px 40px 0 60px;
+    height: 100%;
+    border-right: 1px #e6e6e6 solid;
+    p.title{
+      font-size: 24px;
+      font-weight: $black;
+      line-height: 32px;
+      min-height: 65px;
+    }
+    .stars{
+      padding: 20px 0;
+    }
+    .line{
+      border-left: 8px #b20027 solid;
+      padding-left: 20px;
+      font-size: 11px;
+      i{
+        color: #000;
+        margin-right: 8px;
+        font-size: 12px;
+      }
+      a{
+        display: block;
+        font-size: 11px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    p.text{
+      padding-top: 35px;
+    }
+  }
+
+}

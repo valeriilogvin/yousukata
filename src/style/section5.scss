@@ -1,0 +1,35 @@
+.sect5{
+  background: url("../img/sect5-bg.jpg") bottom center no-repeat;
+  background-size: cover;
+  padding: 65px 0 140px;
+  .col-6{
+    position: relative;
+    padding-bottom: 245px;
+    &:after{
+      position: absolute;
+      content: url("../img/sect5-logo.png");
+      right: 0;
+      bottom: -65px;
+    }
+    &:before{
+      position: absolute;
+      content: url("../img/sect5-enjoy.png");
+      right: 0;
+      bottom: 115px;
+    }
+  }
+  h2{
+    padding-bottom: 70px;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: url("../img/about_curve.png");
+      left: 0;
+      bottom: 5px;
+    }
+  }
+  p{
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

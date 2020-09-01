@@ -1,0 +1,49 @@
+.sect8{
+  background-color: #ffffff;
+  .flex{
+    padding-bottom: 50px;
+  }
+  .col-3{
+    display: flex;
+    justify-content: flex-end;
+    a.button{
+      color: #777777;
+      &.black {
+        span.back {
+          border-right: 4px solid #777777;
+          &:before{
+            background-color: #777777;
+          }
+          &:after{
+            background-color: #777777;
+          }
+        }
+      }
+    }
+  }
+  h2{
+    color: #000000;
+    display: inline-block;
+    position: relative;
+    &:after{
+      content: url("../img/reviews_curve.png");
+      position: absolute;
+      bottom: -17px;
+      right: -5px;
+    }
+  }
+
+}
+.sect8-slick{
+  margin: 0 -15px;
+  .slide{
+    margin: 15px;
+    padding: 15px 0;
+    position: relative;
+    background-color: #000000;
+    &:hover{
+      margin: 0 15px;
+      padding: 15px 0;
+    }
+  }
+}

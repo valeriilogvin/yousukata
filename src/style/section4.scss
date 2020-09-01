@@ -1,6 +1,9 @@
 .sect4{
   background-color: #ffffff;
-  padding-top: 85px;
+  background-image: url("../img/sect4-bg.png");
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  padding: 85px 0 150px;
   h2{
     color: #000000;
     padding-bottom: 45px;
@@ -25,8 +28,6 @@
       margin-top: 15px;
     }
   }
-
-
   .back{
   }
 }
@@ -62,8 +63,14 @@
       left: 0;
       content: '';
     }
+    i{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #ffffff;
+    }
   }
-  a.watch{
+  .watch{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -83,6 +90,7 @@
     p.title{
       bottom: 30px;
       left: 30px;
+      right: 30px;
     }
   }
   .slider-column{
@@ -93,9 +101,63 @@
     .slider-item{
       margin: 10px;
     }
+    .watch{
+      width: 90px;
+      height: 90px;
+      img{
+        width: 100%;
+      }
+    }
+    p.title{
+      bottom: 10px;
+      left: 20px;
+      right: 20px;
+    }
   }
   .slider-column-top,
   .slider-column-bottom{
     height: 50%;
+    p.title{
+      font-size: 18px;
+      line-height: 28px;
+      span.text{
+        font-size: 12px;
+        font-weight: $regular;
+        line-height: 18px;
+        display: inline-block;
+      }
+    }
   }
+  .slider-column-top{
+    background: url("../img/sect4-slider-col1.png.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  .slider-column-bottom{
+    background: url("../img/sect4-slider-col2.png.jpg") center center no-repeat;
+    background-size: cover;
+  }
+}
+button.slick-arrow{
+  background: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+  &:hover{
+    i{
+      transition: all .5s ease;
+
+      color: #b20027;
+    }
+  }
+  i{
+    font-size: 28px;
+    color: #999999;
+  }
+}
+button.my-slick-next{
+  right: 0;
 }
