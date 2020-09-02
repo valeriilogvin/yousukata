@@ -1,34 +1,42 @@
-.sect8{
-  background-color: #ffffff;
-  .flex{
-    padding-bottom: 50px;
+.sect8 {
+  background: url("../img/sect2-bg.jpg") top center no-repeat;
+  .flex {
+    padding-bottom: 75px;
   }
-  .col-3{
+
+  .col-3 {
     display: flex;
     justify-content: flex-end;
-    a.button{
+
+    a.button {
       color: #777777;
-      &:hover{
+
+      &:hover {
         color: #000;
       }
+
       &.black {
         span.back {
           border-right: 4px solid #777777;
-          &:before{
+
+          &:before {
             background-color: #777777;
           }
-          &:after{
+
+          &:after {
             background-color: #777777;
           }
         }
       }
     }
   }
-  h2{
+
+  h2 {
     color: #000000;
     display: inline-block;
     position: relative;
-    &:after{
+
+    &:after {
       content: url("../img/reviews_curve.png");
       position: absolute;
       bottom: -17px;
@@ -36,12 +44,44 @@
     }
   }
 
+  .bottom-text{
+    padding-top: 120px;
+    p {
+      position: relative;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: $regular;
+      height: 55px;
+      overflow: hidden;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(to bottom, #000, #000, rgba(0, 0, 0, 0));
+      &.visible{
+        height: auto;
+        color: #000;
+        background-clip: inherit;
+        background-image: none;
+      }
+    }
+    a.show{
+      cursor: pointer;
+      display: block;
+      width: max-content;
+      margin: 0 auto;
+      color: #b20027;
+      font-size: 12px;
+      font-weight: $black;
+    }
+  }
+
 }
 .sect8-slick{
   margin: 0 -15px;
+  padding: 0 40px;
   .slide{
-    margin: 15px;
-    padding: 15px 0;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+    margin: 30px 15px;
     position: relative;
     background-color: #000000;
     //min-height: 300px;
@@ -54,23 +94,55 @@
       .slide-title{
         background: none;
       }
+      h3{
+        color: #ffffff;
+      }
+      a.button{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .5s ease;
+      }
     }
     .slide-title{
-      margin-top: 200px;
+      margin-top: 325px;
       background-color: #fff;
       position: relative;
+      padding: 20px 25px 0 25px;
+      span{
+        font-size: 12px;
+        line-height: 20px;
+        color: #b20027;
+        font-weight: $light;
+        + span{
+          margin-left: 20px;
+        }
+        .value{
+          font-weight: $medium;
+        }
+      }
     }
     h3{
-      height: 150px;
+      padding-top: 10px;
+      height: 85px;
       color: #000000;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: $black;
     }
     .img-block{
+      background-repeat: no-repeat;
+      background-position: top center;
+      -webkit-background-size: cover;
+      background-size: cover;
       position: absolute;
       width: 100%;
       height: 100%;
       left: 0;
       top: 0;
     }
-
+    a.button{
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }

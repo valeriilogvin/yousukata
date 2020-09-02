@@ -75,6 +75,15 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    &:after{
+      position: absolute;
+      content:'' ;
+      top: 50%;
+      left: 50%;
+      transform: translate(-20%, -50%);
+      border: 25px solid transparent;
+      border-left: 30px solid #ffffff;
+    }
   }
   p.title{
     position: absolute;
@@ -107,6 +116,7 @@
       img{
         width: 100%;
       }
+
     }
     p.title{
       bottom: 10px;
@@ -157,6 +167,9 @@ button.slick-arrow{
     font-size: 28px;
     color: #999999;
   }
+}
+button.my-slick-prev{
+  left: 0;
 }
 button.my-slick-next{
   right: 0;

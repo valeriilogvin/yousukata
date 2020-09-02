@@ -78,3 +78,9 @@ $(document).ready(function () {
         });
     });
 });
+
+$('.sect8').on('click', '.js-show', function () {
+    $('.js-show-text').toggleClass('visible');
+    var hBlock = $(this).siblings('.visible');
+    $(this).text(hBlock.is(':visible') ? 'Hide text' : 'Show full text');
+});

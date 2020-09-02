@@ -611,6 +611,8 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     display: inherit; }
     .header a.logo:focus {
       margin-top: 5px; }
+    .header a.logo img {
+      width: 180px; }
   .header ul.navbar {
     margin-left: auto;
     padding: 0; }
@@ -624,6 +626,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
       .header ul.navbar li a {
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
+        color: #ffffff;
         line-height: 26px; }
         .header ul.navbar li a:hover {
           color: #e10031; }
@@ -1359,6 +1362,16 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+    .sect4-slick .watch:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-20%, -50%);
+          -ms-transform: translate(-20%, -50%);
+              transform: translate(-20%, -50%);
+      border: 25px solid transparent;
+      border-left: 30px solid #ffffff; }
   .sect4-slick p.title {
     position: absolute;
     color: #ffffff;
@@ -1433,6 +1446,9 @@ button.slick-arrow {
     font-size: 28px;
     color: #999999; }
 
+button.my-slick-prev {
+  left: 0; }
+
 button.my-slick-next {
   right: 0; }
 
@@ -1445,7 +1461,8 @@ button.my-slick-next {
     padding-bottom: 245px; }
     .sect5 .col-6:after {
       position: absolute;
-      content: url("../img/sect5-logo.png");
+      content: url("../img/logo.png");
+      opacity: .03;
       right: 0;
       bottom: -65px; }
     .sect5 .col-6:before {
@@ -1474,7 +1491,8 @@ button.my-slick-next {
     padding-bottom: 245px; }
     .sect5 .col-6:after {
       position: absolute;
-      content: url("../img/sect5-logo.png");
+      content: url("../img/logo.png");
+      opacity: .03;
       right: 0;
       bottom: -65px; }
     .sect5 .col-6:before {
@@ -1568,9 +1586,9 @@ button.my-slick-next {
     margin-top: 60px; }
 
 .sect8 {
-  background-color: #ffffff; }
+  background: url("../img/sect2-bg.jpg") top center no-repeat; }
   .sect8 .flex {
-    padding-bottom: 50px; }
+    padding-bottom: 75px; }
   .sect8 .col-3 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1599,12 +1617,44 @@ button.my-slick-next {
       position: absolute;
       bottom: -17px;
       right: -5px; }
+  .sect8 .bottom-text {
+    padding-top: 120px; }
+    .sect8 .bottom-text p {
+      position: relative;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      height: 55px;
+      overflow: hidden;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(#000), to(rgba(0, 0, 0, 0)));
+      background-image: -o-linear-gradient(top, #000, #000, rgba(0, 0, 0, 0));
+      background-image: linear-gradient(to bottom, #000, #000, rgba(0, 0, 0, 0)); }
+      .sect8 .bottom-text p.visible {
+        height: auto;
+        color: #000;
+        background-clip: inherit;
+        background-image: none; }
+    .sect8 .bottom-text a.show {
+      cursor: pointer;
+      display: block;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      margin: 0 auto;
+      color: #b20027;
+      font-size: 12px;
+      font-weight: 900; }
 
 .sect8-slick {
-  margin: 0 -15px; }
+  margin: 0 -15px;
+  padding: 0 40px; }
   .sect8-slick .slide {
-    margin: 15px;
-    padding: 15px 0;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+    margin: 30px 15px;
     position: relative;
     background-color: #000000; }
     .sect8-slick .slide:hover {
@@ -1614,16 +1664,137 @@ button.my-slick-next {
         opacity: .3; }
       .sect8-slick .slide:hover .slide-title {
         background: none; }
+      .sect8-slick .slide:hover h3 {
+        color: #ffffff; }
+      .sect8-slick .slide:hover a.button {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: opacity .5s ease;
+        -o-transition: opacity .5s ease;
+        transition: opacity .5s ease; }
     .sect8-slick .slide .slide-title {
-      margin-top: 200px;
+      margin-top: 325px;
       background-color: #fff;
-      position: relative; }
+      position: relative;
+      padding: 20px 25px 0 25px; }
+      .sect8-slick .slide .slide-title span {
+        font-size: 12px;
+        line-height: 20px;
+        color: #b20027;
+        font-weight: 300; }
+        .sect8-slick .slide .slide-title span + span {
+          margin-left: 20px; }
+        .sect8-slick .slide .slide-title span .value {
+          font-weight: 500; }
     .sect8-slick .slide h3 {
-      height: 150px;
-      color: #000000; }
+      padding-top: 10px;
+      height: 85px;
+      color: #000000;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 900; }
     .sect8-slick .slide .img-block {
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
       position: absolute;
       width: 100%;
       height: 100%;
       left: 0;
       top: 0; }
+    .sect8-slick .slide a.button {
+      opacity: 0;
+      visibility: hidden; }
+
+.footer {
+  padding-top: 75px;
+  background: url("../img/sect3-bg.jpg") bottom center no-repeat;
+  background-size: cover; }
+  .footer .logo {
+    position: relative; }
+    .footer .logo img {
+      width: 300px; }
+    .footer .logo:after {
+      position: absolute;
+      content: url("../img/curve_footer.png");
+      left: 0;
+      bottom: 0;
+      -webkit-transform: translateY(100%);
+          -ms-transform: translateY(100%);
+              transform: translateY(100%); }
+  .footer ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff; }
+    .footer ul li a:hover {
+      color: #da002e; }
+  .footer p.text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400; }
+  .footer .form-footer {
+    padding-top: 15px;
+    width: 100%; }
+    .footer .form-footer input {
+      width: -webkit-calc(100% - 60px);
+      width: calc(100% - 60px);
+      margin-right: 10px;
+      border: none;
+      border-bottom: 1px #cccccc solid;
+      background: none;
+      font-size: 14px;
+      color: #cccccc;
+      font-weight: 300; }
+      .footer .form-footer input::-webkit-input-placeholder {
+        font-size: 14px;
+        color: #cccccc;
+        font-weight: 300; }
+      .footer .form-footer input::-moz-placeholder {
+        font-size: 14px;
+        color: #cccccc;
+        font-weight: 300; }
+      .footer .form-footer input:-ms-input-placeholder {
+        font-size: 14px;
+        color: #cccccc;
+        font-weight: 300; }
+      .footer .form-footer input::-ms-input-placeholder {
+        font-size: 14px;
+        color: #cccccc;
+        font-weight: 300; }
+      .footer .form-footer input::placeholder {
+        font-size: 14px;
+        color: #cccccc;
+        font-weight: 300; }
+    .footer .form-footer button {
+      cursor: pointer;
+      width: 45px;
+      height: 45px;
+      background: url("../img/play.png") center no-repeat;
+      background-size: contain;
+      border: none;
+      outline: none; }
+      .footer .form-footer button i {
+        font-size: 20px;
+        color: #ffffff; }
+  .footer .social {
+    padding-top: 30px; }
+    .footer .social a + a {
+      margin-left: 30px; }
+    .footer .social a:hover i {
+      color: #da002e; }
+    .footer .social i {
+      color: #ffffff; }
+  .footer .copyright {
+    margin-top: 80px;
+    padding: 25px 0;
+    position: relative; }
+    .footer .copyright span {
+      font-size: 12px;
+      color: #aaaaaa; }
+    .footer .copyright img.icons {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
