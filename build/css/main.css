@@ -1582,6 +1582,8 @@ button.my-slick-next {
             justify-content: flex-end; }
     .sect8 .col-3 a.button {
       color: #777777; }
+      .sect8 .col-3 a.button:hover {
+        color: #000; }
       .sect8 .col-3 a.button.black span.back {
         border-right: 4px solid #777777; }
         .sect8 .col-3 a.button.black span.back:before {
@@ -1607,4 +1609,21 @@ button.my-slick-next {
     background-color: #000000; }
     .sect8-slick .slide:hover {
       margin: 0 15px;
-      padding: 15px 0; }
+      padding: 30px 0 30px; }
+      .sect8-slick .slide:hover .img-block {
+        opacity: .3; }
+      .sect8-slick .slide:hover .slide-title {
+        background: none; }
+    .sect8-slick .slide .slide-title {
+      margin-top: 200px;
+      background-color: #fff;
+      position: relative; }
+    .sect8-slick .slide h3 {
+      height: 150px;
+      color: #000000; }
+    .sect8-slick .slide .img-block {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0; }
