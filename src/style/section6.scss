@@ -66,5 +66,21 @@
       padding-top: 35px;
     }
   }
-
+}
+@media (max-width: 1280px) {
+  .sect6{
+    padding: 70px 0;
+  }
+  .sect6-slick {
+    .slide {
+      padding: 35px 25px 0 25px;
+      p.title {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      p.text{
+        line-height: 22px;
+      }
+    }
+  }
 }

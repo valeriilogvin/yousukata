@@ -85,6 +85,11 @@
     flex-direction: column;
     align-items: start;
     padding: 35px 50px;
+    .descriptions{
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
     .fire{
       position: absolute;
       left: 50px;
@@ -184,4 +189,97 @@
 .star:before {
   -webkit-clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%);
   clip-path: polygon(50% 0%, 66% 27%, 98% 35%, 76% 57%, 79% 91%, 50% 78%, 21% 91%, 24% 57%, 2% 35%, 32% 27%);
+}
+@media (max-width: 1366px) {
+  .sect2{
+    .flex{
+      flex-wrap: wrap;
+    }
+    .col-6{
+      width: calc(40% - 30px);
+    }
+    .col-3{
+      width: calc(30% - 30px);
+    }
+    .deal_of_the_month{
+      h2{
+        margin-bottom: 65px;
+      }
+      .img-block{
+        margin: auto;
+      }
+      .flex{
+        div{
+          &.description{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .item{
+      padding: 20px 30px;
+      h2{
+        font-size: 24px;
+        br{
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .sect2{
+    padding: 70px 0;
+    .item{
+      padding: 20px 20px;
+      h3{
+        line-height: 26px;
+      }
+      a.button{
+        font-size: 18px;
+        line-height: 40px;
+      }
+    }
+    .top_sales {
+      .price {
+        font-size: 22px;
+      }
+    }
+    .text-center a.button {
+      margin-top: 80px;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .sect2 {
+    .item {
+      width: calc(100% - 30px);
+      + .item{
+        margin-top: 40px;
+      }
+    }
+    .deal_of_the_month {
+      .flex {
+        div.description{
+          width: 45%;
+        }
+      }
+    }
+    .top_sales{
+      + .top_sales{
+        border-left: none;
+        border-top: 1px solid #e5e5e5;
+      }
+      flex-wrap: wrap;
+      flex-direction: row;
+      .img-block{
+        width: 50%;
+      }
+      .descriptions{
+        margin-left: 25px;
+        margin-top: auto;
+        width: 45%;
+      }
+    }
+  }
 }

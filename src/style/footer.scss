@@ -10,9 +10,16 @@
     }
     &:after{
       position: absolute;
-      content: url("../img/curve_footer.png");
+      content: '';
+      width: 340px;
+      height: 75px;
+      background-image: url(../img/curve_footer.png);
+      background-repeat: no-repeat;
+      background-size: contain;
       left: 0;
       bottom: 0;
+      -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
       transform: translateY(100%);
     }
   }
@@ -95,6 +102,31 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .footer{
+    .logo {
+      img {
+        width: 220px;
+      }
+      &:after{
+        width: 230px;
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .footer{
+    .flex{
+      flex-wrap: wrap;
+      .col-4{
+        width: 100%;
+        + .col-4{
+          margin-top: 70px;
+        }
+      }
     }
   }
 }

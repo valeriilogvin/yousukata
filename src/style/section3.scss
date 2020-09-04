@@ -91,3 +91,57 @@
     top: 0;
   }
 }
+@media (max-width: 1366px) {
+  .sect3 {
+    .flex {
+      .item {
+        img {
+          bottom: 10px;
+          right: 10px;
+          width: 60%;
+        }
+        a.button{
+          font-size: 16px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .sect3 {
+    padding: 70px 0;
+    .flex{
+      .item{
+        width: calc(50% - 30px);
+      }
+    }
+    h2{
+      margin-bottom: 25px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .sect3 {
+    .flex {
+      .item{
+        min-height: 180px;
+        img{
+          width: 40%;
+        }
+        &:hover{
+          h3{
+            margin: auto 0 45px 0;
+          }
+        }
+        &:before {
+          min-height: 100%;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        h3{
+          margin: auto 0 45px 0;
+        }
+      }
+    }
+  }
+}

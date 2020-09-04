@@ -38,7 +38,7 @@
   box-sizing: border-box;
   .slider{
     display: flex;
-    height: 450px;
+    min-height: 450px;
     padding: 3px 30px;
   }
   .slider-item{
@@ -75,6 +75,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    img{
+      width: 100%;
+    }
     &:after{
       position: absolute;
       content:'' ;
@@ -116,7 +119,15 @@
       img{
         width: 100%;
       }
-
+      &:after{
+        position: absolute;
+        content:'' ;
+        top: 50%;
+        left: 50%;
+        transform: translate(-20%, -50%);
+        border: 15px solid transparent;
+        border-left: 20px solid #ffffff;
+      }
     }
     p.title{
       bottom: 10px;
@@ -169,8 +180,59 @@ button.slick-arrow{
   }
 }
 button.my-slick-prev{
-  left: 0;
+  left: -25px;
 }
 button.my-slick-next{
-  right: 0;
+  right: -25px;
+}
+@media (max-width: 1366px) {
+  .sect4-slick{
+    .watch{
+      width: 140px;
+
+    }
+    .slider-column {
+      .watch{
+        width: 65px;
+        height: 65px;
+        &:after{
+          border: 10px solid transparent;
+          border-left: 15px solid #ffffff;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .sect4{
+    padding: 70px 0;
+    h2:before {
+      position: absolute;
+      content: url(../img/deal_curve2.png);
+      left: 40px;
+      bottom: 15px}
+  }
+  .sect4-slick{
+    .slider{
+      flex-wrap: wrap;
+      a{
+        height: 250px;
+      }
+      .slider-row{
+        width: 100%;
+      }
+      .slider-column{
+        margin-top: 15px;
+        width: 100%;
+      }
+    }
+    .watch {
+      width: 65px;
+      height: 65px;
+      &:after{
+        border: 10px solid transparent;
+        border-left: 15px solid #ffffff;
+      }
+    }
+  }
 }

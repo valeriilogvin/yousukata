@@ -39,6 +39,32 @@ $(document).ready(function () {
         // fade: true,
         // cssEase: 'linear',
         // pauseOnHover:false,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
     $('.sect8-slick').slick({
         slidesToShow: 4,
@@ -46,10 +72,32 @@ $(document).ready(function () {
         dots: false,
         prevArrow: '<button type="button" class="my-slick-prev"><i class="fas fa-chevron-left"></i></button>',
         nextArrow: '<button type="button" class="my-slick-next"><i class="fas fa-chevron-right"></i></button>',
-        // infinite: true,
-        // fade: true,
-        // cssEase: 'linear',
-        // pauseOnHover:false,
+        responsive: [
+            {
+                breakpoint: 1281,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
 });
 
