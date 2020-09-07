@@ -19,7 +19,11 @@
     }
     &:before{
       position: absolute;
-      content: url("../img/sect5-enjoy.png");
+      content: '';
+      background: url("../img/sect5-enjoy.png") center center no-repeat;
+      background-size: contain;
+      width: 340px;
+      height: 90px;
       right: 0;
       bottom: 115px;
     }
@@ -47,6 +51,50 @@
       width: 66%;
       &:after{
         width: 450px;
+      }
+    }
+  }
+}
+@media (max-width: 1024px){
+  .sect5 {
+    .col-6 {
+      width: 80%;
+      padding-bottom: 220px;
+      &:after {
+        width: 350px;
+      }
+
+      &:before {
+        width: 250px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .sect5 {
+    h2 {
+      padding-bottom: 30px;
+    }
+    .col-6 {
+      width: 100%;
+      padding-bottom: 200px;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .sect5 {
+    padding: 40px 0;
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .col-6{
+      padding-bottom: 0;
+      &:before{
+        display: none;
+      }
+      &:after{
+        display: none;
       }
     }
   }

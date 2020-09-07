@@ -157,3 +157,42 @@
     }
   }
 }
+@media (max-width: 1024px){
+  .sect8 {
+    .bottom-text {
+      padding-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .sect8 {
+    .flex{
+      padding-bottom: 30px;
+    }
+    .col-3{
+      margin-top: 20px;
+      width: calc(100% - 30px);
+      justify-content: flex-start;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .sect8{
+    button.my-slick-prev {
+      left: 0;
+    }
+    button.my-slick-next {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .sect8 {
+    padding: 40px 0;
+  }
+  .sect8-slick {
+    padding: 0 25px;
+  }
+}

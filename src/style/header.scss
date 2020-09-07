@@ -186,6 +186,9 @@ a.button {
             width 0.25s ease-out 0.5s, // And then exanding width
             height 0.25s ease-out 0.75s; // And finally height
   }
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 section{
   position: relative;
@@ -217,6 +220,18 @@ h2{
   @media (max-width: 1280px) {
     font-size: 26px;
     line-height: 36px;
+  }
+  @media (max-width: 768px) {
+    font-size: 22px;
+    line-height: 30px;
+    &:after{
+      display: none;
+    }
+  }
+  @media (max-width: 380px) {
+    font-size: 18px;
+    line-height: 26px;
+
   }
 }
 h3{

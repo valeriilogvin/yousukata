@@ -8,7 +8,7 @@
     color: #000000;
     padding-bottom: 45px;
     position: relative;
-    &:before{
+    &:after{
       position: absolute;
       content: url("../img/deal_curve2.png");
       left: 100px;
@@ -206,7 +206,7 @@ button.my-slick-next{
 @media (max-width: 1280px) {
   .sect4{
     padding: 70px 0;
-    h2:before {
+    h2:after {
       position: absolute;
       content: url(../img/deal_curve2.png);
       left: 40px;
@@ -234,5 +234,47 @@ button.my-slick-next{
         border-left: 15px solid #ffffff;
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .sect4 {
+    h2 {
+      padding-bottom: 30px;
+    }
+    .col-9{
+      width: calc(100% - 30px);
+    }
+    .button-block{
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sect4{
+    .col-3{
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .sect4 {
+    padding: 40px 0;
+    p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  .sect4-slick .slider-row p.title {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    font-size: 16px;
+  }
+  .sect4-slick .slider-column-top p.title,
+  .sect4-slick .slider-column-bottom p.title {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

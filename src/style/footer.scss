@@ -6,12 +6,12 @@
   .logo{
     position: relative;
     img{
-      width: 300px;
+      width: 100%;
     }
     &:after{
       position: absolute;
       content: '';
-      width: 340px;
+      width: 100%;
       height: 75px;
       background-image: url(../img/curve_footer.png);
       background-repeat: no-repeat;
@@ -105,28 +105,48 @@
     }
   }
 }
-@media (max-width: 1280px) {
-  .footer{
-    .logo {
-      img {
-        width: 220px;
-      }
-      &:after{
-        width: 230px;
-      }
-    }
-  }
-}
 @media (max-width: 1024px) {
   .footer{
     .flex{
       flex-wrap: wrap;
+
       .col-4{
-        width: 100%;
-        + .col-4{
-          margin-top: 70px;
+        width: calc(40% - 30px);
+        &:nth-child(1){
+          width: calc(20% - 30px)
         }
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .footer{
+    a.logo{
+      &:after{
+        display: none;
+      }
+    }
+    .flex{
+     .col-4{
+       width: calc(100% - 30px);
+       &:nth-child(1) {
+         text-align: center;
+         width: calc(40% - 30px);
+       }
+       + .col-4{
+         margin-top: 30px;
+       }
+     }
+    }
+    .copyright span {
+      padding-bottom: 60px;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .footer .copyright img.icons{
+    width: 100%;
   }
 }

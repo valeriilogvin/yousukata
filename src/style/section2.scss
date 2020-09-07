@@ -20,6 +20,11 @@
       color: #000;
       margin-bottom: 13px;
     }
+    .descriptions{
+      .flex{
+        margin-top: auto;
+      }
+    }
   }
   .deal_of_the_month{
     box-shadow: 0 1px 3px rgba(0,0,0,.5);
@@ -41,13 +46,12 @@
         left: -10px;
       }
     }
-    .description{
+    .descriptions{
       width: 45%;
       margin-left: 25px;
       display: flex;
       flex-direction: column;
       .flex{
-        margin-top: auto;
         align-items: center;
       }
     }
@@ -145,6 +149,7 @@
 }
 .stars {
   text-align: left;
+  margin-bottom: 20px;
   .star {
     display: inline-block;
     vertical-align: top;
@@ -210,7 +215,7 @@
       }
       .flex{
         div{
-          &.description{
+          &.descriptions{
             width: 100%;
           }
         }
@@ -228,58 +233,247 @@
   }
 }
 @media (max-width: 1280px) {
-  .sect2{
+  .sect2 {
     padding: 70px 0;
-    .item{
+
+    .col-3,
+    .col-6 {
+      width: calc(33% - 30px);
+    }
+
+    .item {
+      position: relative;
       padding: 20px 20px;
-      h3{
-        line-height: 26px;
+
+      h3 {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        min-height: 72px;
       }
-      a.button{
+
+      h2 {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        font-size: 18px;
+        margin-bottom: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      a.button {
         font-size: 18px;
         line-height: 40px;
       }
+
+      .fire {
+        left: 20px;
+      }
+
+      div.descriptions {
+        margin-left: 0;
+      }
     }
+
+    .deal_of_the_month {
+
+      .img-block {
+        width: 100%;
+      }
+
+      span.price {
+        font-size: 22px;
+      }
+
+      span.old-price {
+        margin-top: 3px;
+      }
+    }
+
     .top_sales {
       .price {
         font-size: 22px;
       }
     }
+
     .text-center a.button {
       margin-top: 80px;
     }
+
+    img.pepper {
+      bottom: 0;
+    }
+    img.limes{
+      bottom: 0;
+    }
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   .sect2 {
+    .flex{
+      justify-content: center;
+    }
     .item {
-      width: calc(100% - 30px);
+      width: calc(50% - 30px);
       + .item{
         margin-top: 40px;
       }
+      .img-block{
+        width: 40%;
+      }
     }
     .deal_of_the_month {
+      width: calc(100% - 30px);
       .flex {
-        div.description{
+        justify-content: space-between;
+        div.descriptions{
           width: 45%;
         }
       }
     }
-    .top_sales{
-      + .top_sales{
-        border-left: none;
-        border-top: 1px solid #e5e5e5;
-      }
+    .top_sales {
       flex-wrap: wrap;
       flex-direction: row;
       .img-block{
-        width: 50%;
+        width: 100%;
       }
-      .descriptions{
+      .descriptions {
         margin-left: 25px;
         margin-top: auto;
-        width: 45%;
+        width: 100%;
+        .flex{
+          justify-content: space-between;
+        }
       }
+    }
+
+  }
+}
+@media (max-width: 768px) {
+  .sect2 {
+    h2 {
+      padding-bottom: 30px;
+    }
+    .item {
+      + .item {
+        margin-top: 30px;
+      }
+      &.top_sales{
+        width: calc(100% - 30px);
+        + .top_sales {
+          border-left: none;
+        }
+        h3{
+          margin-top: 0;
+        }
+        .fire {
+          top: 25px;
+        }
+        .img-block {
+          margin: auto 30px 0 0;
+          width: 30%;
+        }
+        div.descriptions{
+          width: 60%;
+          .flex{
+            align-items: flex-end;
+          }
+        }
+      }
+      .flex {
+        div.descriptions{
+          width: 100%;
+        }
+      }
+      h3{
+        min-height: 48px;
+      }
+      .img-block{
+        padding-top: 30px;
+        margin: auto 0;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .sect2{
+    img.limes {
+      width: 125px;
+    }
+    img.pepper {
+      width: 120px;
+    }
+  }
+}
+@media (max-width: 380px){
+  .sect2 {
+    padding: 40px 0;
+    h2{
+      padding-bottom: 20px;
+    }
+    img.parsley {
+      top: 0;
+      width: 105px;
+    }
+    .item {
+      h2 {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+      h3 {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      a.button {
+        font-size: 16px;
+        line-height: 38px;
+      }
+      &.deal_of_the_month {
+        span.price {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        span.old-price{
+          font-size: 18px;
+          line-height: 26px;
+          &:after {
+            bottom: 12px;
+            width: 75px;
+          }
+        }
+      }
+      &.top_sales {
+        div.descriptions{
+          .flex{
+            align-items: center;
+          }
+        }
+        .price {
+          font-size: 18px;
+        }
+        .fire {
+          top: 0;
+          left: 20px;
+        }
+      }
+    }
+    .text-center a.button {
+      margin-top: 40px;
+    }
+    img.pepper {
+      display: none;
+    }
+    img.limes {
+      display: none;
     }
   }
 }
