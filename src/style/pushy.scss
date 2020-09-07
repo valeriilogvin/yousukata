@@ -59,7 +59,11 @@ button.menu-btn {
   min-height: $pushy-min-height;
   align-items: start;
 }
-
+.pushy-open-left .site-overlay, .pushy-open-right .site-overlay {
+  z-index: 101;
+  background-color: rgba(0,0,0,.5);
+  animation: a .5s;
+}
 .pushy-left{
   transform: translate3d(-$pushy-width,0,0);
 }

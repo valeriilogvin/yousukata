@@ -1,4 +1,37 @@
 $(document).ready(function () {
+
+    //Фиксированное меню
+    /*var navbar = document.getElementById('navbarId');
+
+    var offsetNavbar = navbar.offsetTop;
+
+    window.onscroll = function(e) {
+        if(window.scrollY >= offsetNavbar) {
+            if(!navbar.classList.contains('position-fixed')) {
+                navbar.classList.add('position-fixed');
+                navbar.classList.add('bs-navbar');
+            }
+        } else {
+            if(navbar.classList.contains('position-fixed')) {
+                navbar.classList.remove('position-fixed');
+                navbar.classList.remove('bs-navbar');
+            }
+        }
+    };*/
+
+    $(function(){
+        $nav = $('.fixed-header');
+        $window = $(window);
+        $h = $nav.offset().top;
+        $window.scroll(function(){
+            if ($window.scrollTop() > $h){
+                $nav.addClass('fixed');
+            } else {
+                $nav.removeClass('fixed');
+            }
+        });
+    });
+
     //slick-slider settings
     $('.sect1-slick').slick({
         slidesToShow: 1,
