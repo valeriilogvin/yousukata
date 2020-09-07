@@ -25,7 +25,22 @@
     justify-content: flex-end;
     align-items: start;
     a.button{
+      color: #777777;
       margin-top: 15px;
+      &:hover {
+        color: #000000;
+      }
+
+      span.back {
+        border-right: 4px solid #777777;
+        &:before {
+          background-color: #777777;
+        }
+        &:after {
+          background-color: #777777;
+          width: 65%;
+        }
+      }
     }
   }
   .back{

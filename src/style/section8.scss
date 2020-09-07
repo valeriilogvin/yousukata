@@ -57,6 +57,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       background-image: linear-gradient(to bottom, #000, #000, rgba(0, 0, 0, 0));
+
       &.visible{
         height: auto;
         color: #000;
@@ -72,6 +73,9 @@
       color: #b20027;
       font-size: 12px;
       font-weight: $black;
+      &:hover{
+        color: #000;
+      }
     }
   }
 
@@ -79,6 +83,9 @@
 .sect8-slick{
   margin: 0 -15px;
   padding: 0 40px;
+  .slick-list{
+    padding: 25px 0;
+  }
   .slide{
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
     margin: 30px 15px;
@@ -88,6 +95,8 @@
     &:hover{
       margin: 0 15px;
       padding: 30px 0 30px;
+      box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
       .img-block{
         opacity: .3;
       }
@@ -97,10 +106,29 @@
       h3{
         color: #ffffff;
       }
+      span.time,
       a.button{
         opacity: 1;
         visibility: visible;
         transition: opacity .5s ease;
+      }
+    }
+    span.time {
+      color: #ffffff;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 14px;
+      font-weight: $semi-bold;
+      z-index: 1;
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      padding-left: 24px;
+      &:after{
+        content: url("../img/clock.png");
+        position: absolute;
+        left: 0;
+        top: 3px;
       }
     }
     .slide-title{

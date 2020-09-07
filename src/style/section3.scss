@@ -30,7 +30,7 @@
           bottom: 40px;
           transition: all .5s ease;
         }
-        a.button2 {
+        a.button{
           opacity: 1;
           visibility: visible;
           transition: all .5s ease;
@@ -67,7 +67,7 @@
         bottom: 0;
         right: 0;
       }
-      a.button2{
+      a.button{
         opacity: 0;
         visibility: hidden;
         &:hover{

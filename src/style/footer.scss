@@ -66,6 +66,12 @@
       background-size: contain;
       border: none;
       outline: none;
+      &:hover{
+        i{
+          color: #000000;
+          transition: all .5s ease;
+        }
+      }
       i{
         font-size: 20px;
         color: #ffffff;

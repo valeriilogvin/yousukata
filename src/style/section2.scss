@@ -99,7 +99,7 @@
       left: 50px;
       top: 15px;
       background-color: #ff2a00;
-      border-radius: 2px;
+      border-radius: 4px;
       padding: 2px 8px;
       font-size: 14px;
       font-weight: $black;
@@ -123,12 +123,26 @@
       border-left: 1px solid #e5e5e5;
     }
   }
-  .text-center{
-    a.button{
+  .text-center {
+    a.button {
       margin-top: 120px;
+      color: #e10031;
+
+      &:hover {
+        color: #000000;
+      }
+
+      span.back {
+        border-right: 4px solid #e10031;
+        &:before {
+          background-color: #e10031;
+        }
+        &:after {
+          background-color: #e10031;
+        }
+      }
     }
   }
-
   img{
     &.parsley{
       position: absolute;
