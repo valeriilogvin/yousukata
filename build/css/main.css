@@ -1712,11 +1712,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
       opacity: 0;
       visibility: hidden; }
       .sect3 .flex .item a.button:hover {
-        color: #ffffff;
-        border-right: 4px solid #ffffff;
-        border-bottom: 4px solid #ffffff; }
-        .sect3 .flex .item a.button:hover:after {
-          background-color: #ffffff; }
+        color: #ffffff; }
   .sect3 img.bayleaf {
     position: absolute;
     left: 0;
