@@ -125,22 +125,19 @@
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer{
     a.logo{
-      &:after{
-        display: none;
-      }
+      margin-bottom: 40px;
     }
     .flex{
      .col-4{
        width: calc(100% - 30px);
        &:nth-child(1) {
-         text-align: center;
-         width: calc(40% - 30px);
+         width: calc(100% - 30px);
        }
        + .col-4{
-         margin-top: 30px;
+         margin-top: 60px;
        }
      }
     }

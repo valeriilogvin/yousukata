@@ -193,14 +193,17 @@
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
   .sect8 {
     .flex{
       padding-bottom: 30px;
+      align-items: center;
+    }
+    .col-9{
+      width: calc(60% - 30px);
     }
     .col-3{
-      margin-top: 20px;
-      width: calc(100% - 30px);
+      width: calc(40% - 30px);
       justify-content: flex-start;
     }
   }

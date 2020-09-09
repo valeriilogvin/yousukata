@@ -78,13 +78,19 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                 }
             },
             {
-                breakpoint: 769,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -114,10 +120,13 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 769,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    /*arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 3000,*/
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -158,3 +167,28 @@ $('.sect8').on('click', '.js-show', function () {
     var hBlock = $(this).siblings('.visible');
     $(this).text(hBlock.is(':visible') ? 'Hide text' : 'Show full text');
 });
+
+(function() {
+    'use strict';
+    function trackScroll() {
+        var scrolled = window.pageYOffset;
+        var coords = document.documentElement.clientHeight;
+        if (scrolled > coords) {
+            goTopBtn.classList.add('back_to_top-show');
+        }
+        if (scrolled < coords) {
+            goTopBtn.classList.remove('back_to_top-show');
+        }
+    }
+    function backToTop() {
+        if (window.pageYOffset > 0) {
+            window.scrollBy(0, -80);
+            setTimeout(backToTop, 0);
+        }
+    }
+    var goTopBtn = document.querySelector('.back_to_top');
+    if(goTopBtn === null)
+        return;//sm
+    window.addEventListener('scroll', trackScroll);
+    goTopBtn.addEventListener('click', backToTop);
+})();

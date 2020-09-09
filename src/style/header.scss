@@ -32,6 +32,37 @@ textarea{
 
 ::-webkit-scrollbar {
   width: 4px; }
+
+.back_to_top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: none;
+  cursor: pointer;
+  border-radius: 2px;
+  display: none;
+  opacity: .6; }
+.back_to_top .icon {
+  width: 30px;
+  height: 30px;
+  fill: #8ac71e; }
+
+.back_to_top:hover {
+  opacity: 1; }
+.back_to_top:hover .icon {
+  fill: #6fa909;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.back_to_top-show {
+  display: block; }
+
 /* input */
 input:-moz-placeholder{
   font-size: 14px;
@@ -209,7 +240,7 @@ a.button {
             width 0.25s ease-out 0.5s, // And then exanding width
             height 0.25s ease-out 0.75s; // And finally height
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 16px;
   }
 }
@@ -244,7 +275,7 @@ h2{
     font-size: 26px;
     line-height: 36px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 22px;
     line-height: 30px;
     &:after{
@@ -334,7 +365,7 @@ h4{
     width: 720px;
     box-sizing: border-box;
   }
-  @media (max-width: 768px){
+  @media (max-width: 767px){
     width: 440px;
     padding: 0 10px;
   }

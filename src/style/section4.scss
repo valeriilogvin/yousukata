@@ -251,17 +251,27 @@ button.my-slick-next{
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sect4 {
+    .container{
+      position: relative;
+    }
     h2 {
       padding-bottom: 30px;
     }
     .col-9{
       width: calc(100% - 30px);
+      h2{
+        width: 70%;
+      }
     }
-    .button-block{
-      justify-content: flex-start;
-      margin-top: 20px;
+    .col-3{
+      a.button{
+        margin-top: 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
     }
   }
 }

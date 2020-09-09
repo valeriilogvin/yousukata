@@ -168,8 +168,13 @@
   top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .fixed-header a.logo img {
     width: 120px;
+  }
+}
+@media (max-width: 380px) {
+  .fixed-header a.logo img {
+    width: 100px;
   }
 }

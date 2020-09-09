@@ -305,6 +305,7 @@
       }
 
       span.old-price {
+        font-size: 22px;
         margin-top: 3px;
       }
     }
@@ -368,48 +369,76 @@
 
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sect2 {
     h2 {
       padding-bottom: 30px;
     }
+
     .item {
       + .item {
         margin-top: 30px;
+        border-left: none;
       }
       &.top_sales{
-        width: calc(100% - 30px);
-        + .top_sales {
-          border-left: none;
-        }
-        h3{
-          margin-top: 0;
-        }
-        .fire {
-          top: 25px;
-        }
-        .img-block {
-          margin: auto 30px 0 0;
-          width: 30%;
-        }
-        div.descriptions{
-          width: 60%;
-          .flex{
-            align-items: flex-end;
-          }
+        + .top_sales{
+          border-top: 1px solid #e5e5e5;
         }
       }
-      .flex {
-        div.descriptions{
+      width: calc(100% - 30px);
+
+      h2 {
+        width: 30%;
+        top: 20px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      h3 {
+        margin-top: 0;
+        min-height: 48px;
+      }
+
+      .fire {
+        top: 25px;
+      }
+
+      .img-block {
+        margin: auto 30px 0 0;
+        width: 30%;
+      }
+
+      div.descriptions {
+        width: 60%;
+
+        .flex {
+          align-items: center;
+        }
+      }
+
+
+      span.price {
+        font-size: 18px;
+      }
+
+      span.old-price {
+        font-size: 18px;
+        margin-top: 0;
+
+        &:after {
           width: 100%;
         }
       }
-      h3{
-        min-height: 48px;
-      }
-      .img-block{
-        padding-top: 30px;
-        margin: auto 0;
+    }
+    .deal_of_the_month {
+      .flex {
+        justify-content: flex-start;
+        div.descriptions{
+          width: 60%;
+          .flex{
+            justify-content: space-between;
+          }
+        }
       }
     }
   }
@@ -435,8 +464,12 @@
       width: 105px;
     }
     .item {
+      + .item{
+        margin-top: 15px;
+      }
       h2 {
         position: absolute;
+        width: auto;
         left: 20px;
         top: 15px;
         font-size: 16px;
@@ -451,7 +484,13 @@
         font-size: 16px;
         line-height: 38px;
       }
+      .img-block{
+        margin-top: 40px;
+      }
       &.deal_of_the_month {
+        div.descriptions{
+          width: 100%;
+        }
         span.price {
           font-size: 18px;
           line-height: 26px;
@@ -475,7 +514,7 @@
           font-size: 18px;
         }
         .fire {
-          top: 0;
+          top: 20px;
           left: 20px;
         }
       }

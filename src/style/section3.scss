@@ -141,11 +141,30 @@
         h3{
           margin: auto 0 45px 0;
         }
+        a.button{
+          position: absolute;
+          width: 100%;
+          left: 15px;
+          top: 0;
+          height: 100%;
+          background: none;
+          color: transparent;
+          &:hover {
+            color: transparent;
+            border-right: none;
+            border-bottom: none;
+          }
+          &:before,
+          &:after,
+          span.back{
+            display: none;
+          }
+        }
       }
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sect3 {
     .flex {
       .item {
@@ -153,6 +172,7 @@
         h3 {
           font-size: 18px;
         }
+
       }
     }
   }
