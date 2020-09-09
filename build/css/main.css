@@ -1,4 +1,5 @@
 /* Eric Meyer's CSS Reset */
+@import url("../font-awesome/css/all.css");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -182,7 +183,7 @@ a.button {
       top: 0;
       right: 0;
       content: '';
-      width: 80%;
+      width: 65%;
       height: 4px;
       background-color: #b20027; }
     a.button.black span.back:before {
@@ -357,6 +358,10 @@ h4 {
   width: -webkit-calc( 50% - 30px);
   width: calc( 50% - 30px); }
 
+.col-8 {
+  width: -webkit-calc( 66% - 30px);
+  width: calc( 66% - 30px); }
+
 .col-9 {
   width: -webkit-calc( 75% - 30px);
   width: calc( 75% - 30px); }
@@ -400,25 +405,6 @@ h4 {
     .container {
       width: 300px; } }
 
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  max-width: 630px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%); }
-
-.md-show {
-  visibility: visible; }
-
 .md-overlay {
   position: fixed;
   width: 100%;
@@ -428,7 +414,7 @@ h4 {
   left: 0;
   z-index: 1000;
   opacity: 0;
-  background: rgba(143, 27, 15, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
@@ -454,6 +440,10 @@ h4 {
   opacity: 1; }
 
 button.md-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
   outline: none;
   background: none !important;
   width: 30px !important;
@@ -475,6 +465,84 @@ button.md-close {
       transform: rotate(-45deg);
       margin-top: -1px; }
 
+.md-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 310px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+  .md-modal .md-content {
+    padding: 80px 100px;
+    background: url("../img/sect2-bg.jpg") top center no-repeat;
+    background-size: cover; }
+    .md-modal .md-content h2.modal-name {
+      margin-top: 30px;
+      font-size: 48px;
+      line-height: 58px;
+      color: #000000;
+      font-weight: 900;
+      position: relative; }
+      .md-modal .md-content h2.modal-name:after {
+        position: absolute;
+        content: '';
+        background: url("../img/headline_curve.png") top left no-repeat;
+        background-size: contain;
+        left: 0;
+        bottom: 0;
+        -webkit-transform: translateY(120%);
+            -ms-transform: translateY(120%);
+                transform: translateY(120%);
+        width: 100%;
+        height: 70px; }
+    .md-modal .md-content form input,
+    .md-modal .md-content form select {
+      background: none;
+      outline: none;
+      border: none;
+      border-bottom: 1px #777777 solid;
+      font-size: 14px;
+      font-weight: 500;
+      color: #000000;
+      line-height: 26px;
+      padding: 0 20px;
+      margin-bottom: 30px; }
+    .md-modal .md-content form select {
+      color: #777777; }
+      .md-modal .md-content form select option {
+        color: #000000; }
+    .md-modal .md-content form input:-moz-placeholder {
+      font-size: 14px;
+      color: #777777;
+      font-weight: 500; }
+    .md-modal .md-content form input::-webkit-input-placeholder {
+      font-size: 14px;
+      color: #777777;
+      font-weight: 500; }
+    .md-modal .md-content p.text {
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      text-align: center;
+      font-weight: 300;
+      margin-bottom: 50px; }
+      .md-modal .md-content p.text a {
+        font-weight: 600;
+        color: #b20027; }
+        .md-modal .md-content p.text a:hover {
+          color: #000000; }
+
+.md-show {
+  visibility: visible; }
+
 /* Content styles */
 #modal-1 .md-content {
   color: #ffffff;
@@ -484,6 +552,49 @@ button.md-close {
   margin: 0 auto; }
 
 /* Individual modal styles with animations/transitions */
+@media (max-width: 1280px) {
+  .md-modal .md-content {
+    padding: 40px 60px; } }
+
+@media (max-width: 1024px) {
+  .md-modal .md-content {
+    padding: 30px 40px; }
+    .md-modal .md-content > .flex.row {
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .md-modal .md-content > .flex.row .col-4,
+      .md-modal .md-content > .flex.row .col-8 {
+        width: 100%; }
+    .md-modal .md-content h2.modal-name {
+      margin: 0 auto 60px;
+      font-size: 36px;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content; }
+      .md-modal .md-content h2.modal-name:after {
+        -webkit-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+                transform: translateY(100%); }
+    .md-modal .md-content p.text {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 25px; } }
+
+@media (max-width: 769px) {
+  .md-modal {
+    height: 90%; }
+    .md-modal .md-content {
+      height: 100%;
+      overflow-y: scroll; }
+      .md-modal .md-content h2.modal-name {
+        font-size: 32px;
+        line-height: 42px; }
+        .md-modal .md-content h2.modal-name:after {
+          display: block; }
+      .md-modal .md-content form .col-6 {
+        width: 100%; } }
+
 button.menu-btn {
   background: none;
   border: none;

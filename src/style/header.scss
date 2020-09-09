@@ -1,3 +1,5 @@
+@import url("../font-awesome/css/all.css");
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -20,7 +22,6 @@ textarea{
 ::-webkit-scrollbar-thumb {
   border-radius: 0;
   background-color: rgba(0,0,0, .5) }
-
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255,255,255, .9) }
@@ -143,7 +144,7 @@ a.button {
         top: 0;
         right: 0;
         content: '';
-        width: 80%;
+        width: 65%;
         height: 4px;
         background-color: #b20027;
       }
@@ -334,6 +335,9 @@ h4{
 }
 .col-6{
   width: calc( 50% - 30px);
+}
+.col-8{
+  width: calc( 66% - 30px);
 }
 .col-9{
   width: calc( 75% - 30px);

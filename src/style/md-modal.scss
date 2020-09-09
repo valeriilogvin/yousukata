@@ -1,26 +1,3 @@
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  max-width: $max-width-modal-1;
-  min-width: $min-width-modal-1;
-  height: auto;
-  z-index: 2000;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.md-show {
-  visibility: visible;
-}
-
 .md-overlay {
   position: fixed;
   width: 100%;
@@ -62,6 +39,10 @@
 }
 
 button.md-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
   outline: none;
   background: none !important;
   width: 30px !important;
@@ -87,7 +68,105 @@ button.md-close {
   }
 }
 
+.md-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 310px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  .md-content {
+    padding: 80px 100px;
+    background: url("../img/sect2-bg.jpg") top center no-repeat;
+    background-size: cover;
+    h2.modal-name{
+      margin-top: 30px;
+      font-size: 48px;
+      line-height: 58px;
+      color: #000000;
+      font-weight: $black;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: '';
+        background: url("../img/headline_curve.png") top left no-repeat;
+        background-size: contain;
+        left: 0;
+        bottom: 0;
+        transform: translateY(120%);
+        width: 100%;
+        height: 70px;
+      }
+    }
+
+    form{
+      input,
+      select{
+        background: none;
+        outline: none;
+        border: none;
+        border-bottom: 1px #777777 solid;
+        font-size: 14px;
+        font-weight: $medium;
+        color: #000000;
+        line-height: 26px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+      }
+      select{
+        color: #777777;
+        option{
+          color: #000000;
+        }
+      }
+      input:-moz-placeholder{
+        font-size: 14px;
+        color: #777777;
+        font-weight: $medium;
+
+      }
+      input::-webkit-input-placeholder {
+        font-size: 14px;
+        color: #777777;
+        font-weight: $medium;
+      }
+    }
+
+    p.text{
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+      text-align: center;
+      font-weight: $light;
+      margin-bottom: 50px;
+      a{
+        font-weight: $semi-bold;
+        color: #b20027;
+        &:hover{
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+.md-show {
+  visibility: visible;
+}
+
 /* Content styles */
+#modal-register{
+
+}
 #modal-1{
   .md-content {
     color: $color-modal-1;
@@ -98,3 +177,60 @@ button.md-close {
   }
 }
 /* Individual modal styles with animations/transitions */
+
+@media (max-width: 1280px) {
+  .md-modal{
+    .md-content{
+      padding: 40px 60px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .md-modal{
+    .md-content{
+      padding: 30px 40px;
+
+      > .flex.row{
+        flex-wrap: wrap;
+        .col-4,
+        .col-8{
+          width: 100% ;
+        }
+      }
+      h2.modal-name{
+        margin: 0 auto 60px;
+        font-size: 36px;
+        width: max-content;
+        &:after{
+          transform: translateY(100%);
+        }
+      }
+      p.text {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+@media (max-width: 769px) {
+  .md-modal{
+    height: 90%;
+    .md-content{
+      height: 100%;
+      overflow-y: scroll;
+      h2.modal-name{
+        font-size: 32px;
+        line-height: 42px;
+        &:after{
+          display: block;
+        }
+      }
+      form{
+        .col-6{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
