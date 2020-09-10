@@ -144,7 +144,7 @@
     }
   }
   a.button{
-    margin-left: 50px;
+    margin-left: 30px;
   }
   div.language{
     padding: 7px 20px 7px 55px;
@@ -433,6 +433,9 @@ a.back_to_top{
     display: none;
   }
   .header{
+    a.logo img {
+      width: 140px;
+    }
     .menu-btn.display_none{
       display: block;
     }
@@ -501,12 +504,9 @@ a.back_to_top{
   .header .language {
     display: none;
   }
-  .header a.button {
+  .header .button {
     font-size: 16px;
-    line-height: 26px;
-  }
-  .header a.logo img {
-    width: 110px;
+    line-height: 36px;
   }
   .header-top p {
     font-size: 14px;
@@ -550,11 +550,11 @@ a.back_to_top{
     font-size: 10px;
   }
   .header a.logo img {
-    width: 90px;
+    width: 100px;
   }
   .header a.button {
     font-size: 14px;
-    line-height: 26px;
+    line-height: 28px;
   }
   button.menu-btn span{
     margin-left: 10px;

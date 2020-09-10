@@ -110,7 +110,7 @@ a{
     text-decoration: none;
   }
 }
-a.button {
+.button {
   margin-left: -15px;
   position: relative;
   z-index: 1;
@@ -172,7 +172,7 @@ a.button {
       top: 0;
       right: 0;
       content: '';
-      width: 80%;
+      width: 65%;
       height: 4px;
       background-color: #b20027;
     }
@@ -239,6 +239,9 @@ a.button {
             border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
             width 0.25s ease-out 0.5s, // And then exanding width
             height 0.25s ease-out 0.75s; // And finally height
+  }
+  @media (max-width: 1280px) {
+    font-size: 16px;
   }
   @media (max-width: 767px) {
     font-size: 16px;

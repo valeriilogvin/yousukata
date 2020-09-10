@@ -168,9 +168,28 @@
   top: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1280px) {
+  .fixed-header {
+    a.logo img {
+      width: 100px;
+    }
+    ul.navbar li a {
+      font-size: 14px;
+    }
+  }
+
+}
+@media (max-width: 1024px) {
   .fixed-header a.logo img {
-    width: 120px;
+    width: 140px;
+  }
+}
+@media (max-width: 767px) {
+  .fixed-header div.language {
+    padding: 7px 20px 7px 25px;
+  }
+  .fixed-header a.button {
+    margin-left: 30px;
   }
 }
 @media (max-width: 380px) {

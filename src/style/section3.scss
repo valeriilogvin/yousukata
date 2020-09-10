@@ -30,7 +30,7 @@
           bottom: 40px;
           transition: all .5s ease;
         }
-        a.button{
+        .button{
           opacity: 1;
           visibility: visible;
           transition: all .5s ease;
@@ -67,15 +67,11 @@
         bottom: 0;
         right: 0;
       }
-      a.button{
+      .button{
         opacity: 0;
         visibility: hidden;
         &:hover{
           color: #ffffff;
-          border-right: 4px solid #ffffff;
-          border-bottom: 4px solid #ffffff;
-          &:after {
-            background-color: #ffffff; }
         }
       }
     }
@@ -168,11 +164,28 @@
   .sect3 {
     .flex {
       .item {
+        min-height: 125px;
         width: calc(100% - 30px);
+        margin: 10px 15px;
+        &:hover{
+          h3{
+            margin: auto 0;
+          }
+        }
         h3 {
           font-size: 18px;
+          margin: auto 0 ;
         }
-
+        img{
+          width: 30%;
+          right: 30px;
+          bottom: auto;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .button{
+          display: none;
+        }
       }
     }
   }
@@ -190,26 +203,16 @@
 @media (max-width: 380px){
   .sect3 {
     padding: 40px 0;
-    .flex {
-      .item {
-        padding: 20px;
-        img {
-          bottom: 50%;
-          transform: translateY(50%);
-        }
-        &:hover {
-          h3 {
-            margin: 0 0 auto 0;
-          }
-          img {
-            bottom: 50%;
-          }
-        }
-        h3 {
-          margin: 0 0 auto 0;
-          font-size: 16px;
-        }
+    .flex{
+      .item h3 {
+        font-size: 16px;
+        line-height: 20px;
+        width: 60%;
+        margin: auto 0;
       }
     }
+  }
+  .sect3 img.bayleaf{
+    display: none;
   }
 }

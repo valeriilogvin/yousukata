@@ -1,37 +1,5 @@
 $(document).ready(function () {
 
-    //Фиксированное меню
-    /*var navbar = document.getElementById('navbarId');
-
-    var offsetNavbar = navbar.offsetTop;
-
-    window.onscroll = function(e) {
-        if(window.scrollY >= offsetNavbar) {
-            if(!navbar.classList.contains('position-fixed')) {
-                navbar.classList.add('position-fixed');
-                navbar.classList.add('bs-navbar');
-            }
-        } else {
-            if(navbar.classList.contains('position-fixed')) {
-                navbar.classList.remove('position-fixed');
-                navbar.classList.remove('bs-navbar');
-            }
-        }
-    };*/
-
-    $(function(){
-        $nav = $('.fixed-header');
-        $window = $(window);
-        $h = $nav.offset().top;
-        $window.scroll(function(){
-            if ($window.scrollTop() > $h){
-                $nav.addClass('fixed');
-            } else {
-                $nav.removeClass('fixed');
-            }
-        });
-    });
-
     //slick-slider settings
     $('.sect1-slick').slick({
         slidesToShow: 1,
@@ -61,6 +29,30 @@ $(document).ready(function () {
         // fade: true,
         // cssEase: 'linear',
         // pauseOnHover:false,
+    });
+    $('.sect4-slick-mobile').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: false,
+        arrow: false,
+        infinite: true,
+        // autoplay: true,
+        // autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
     $('.sect6-slick').slick({
         slidesToShow: 3,
@@ -134,11 +126,20 @@ $(document).ready(function () {
             // instead of a settings object
         ]
     });
-});
 
-// $('.sect1-slick .my-dots:after').animate({right: 20%, width:100},{duration:500, easing: easeOutExpo});
-
-$(document).ready(function () {
+    // fixed menu
+    $(function(){
+        $nav = $('.fixed-header');
+        $window = $(window);
+        $h = $nav.offset().top;
+        $window.scroll(function(){
+            if ($window.scrollTop() > $h){
+                $nav.addClass('fixed');
+            } else {
+                $nav.removeClass('fixed');
+            }
+        });
+    });
 
     // appearance & hiding of header-top
     (function($) {
@@ -160,35 +161,38 @@ $(document).ready(function () {
             });
         });
     });
-});
 
-$('.sect8').on('click', '.js-show', function () {
-    $('.js-show-text').toggleClass('visible');
-    var hBlock = $(this).siblings('.visible');
-    $(this).text(hBlock.is(':visible') ? 'Hide text' : 'Show full text');
-});
+    // button back_to_top
+    (function() {
+        'use strict';
+        function trackScroll() {
+            var scrolled = window.pageYOffset;
+            var coords = document.documentElement.clientHeight;
+            if (scrolled > coords) {
+                goTopBtn.classList.add('back_to_top-show');
+            }
+            if (scrolled < coords) {
+                goTopBtn.classList.remove('back_to_top-show');
+            }
+        }
+        function backToTop() {
+            if (window.pageYOffset > 0) {
+                window.scrollBy(0, -80);
+                setTimeout(backToTop, 0);
+            }
+        }
+        var goTopBtn = document.querySelector('.back_to_top');
+        if(goTopBtn === null)
+            return;//sm
+        window.addEventListener('scroll', trackScroll);
+        goTopBtn.addEventListener('click', backToTop);
+    })();
 
-(function() {
-    'use strict';
-    function trackScroll() {
-        var scrolled = window.pageYOffset;
-        var coords = document.documentElement.clientHeight;
-        if (scrolled > coords) {
-            goTopBtn.classList.add('back_to_top-show');
-        }
-        if (scrolled < coords) {
-            goTopBtn.classList.remove('back_to_top-show');
-        }
-    }
-    function backToTop() {
-        if (window.pageYOffset > 0) {
-            window.scrollBy(0, -80);
-            setTimeout(backToTop, 0);
-        }
-    }
-    var goTopBtn = document.querySelector('.back_to_top');
-    if(goTopBtn === null)
-        return;//sm
-    window.addEventListener('scroll', trackScroll);
-    goTopBtn.addEventListener('click', backToTop);
-})();
+    // show/hide text on .sect8
+    $('.sect8').on('click', '.js-show', function () {
+        $('.js-show-text').toggleClass('visible');
+        var hBlock = $(this).siblings('.visible');
+        $(this).text(hBlock.is(':visible') ? 'Hide text' : 'Show full text');
+    });
+
+});
