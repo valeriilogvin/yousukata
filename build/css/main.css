@@ -2253,6 +2253,7 @@ a.back_to_top {
     background-size: cover; }
 
 .sect4-slick-mobile {
+  display:none;
   margin: 55px -15px 0; }
   .sect4-slick-mobile .slider {
     margin: 0 15px; }
