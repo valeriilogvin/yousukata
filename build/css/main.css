@@ -452,20 +452,10 @@ button.md-close {
   border: none;
   height: 30px;
   margin-left: 90%; }
-  button.md-close span {
-    width: 30px;
-    height: 1px;
-    background-color: #b3b3b3;
-    display: block; }
-    button.md-close span:first-child {
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg); }
-    button.md-close span:last-child {
-      -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      margin-top: -1px; }
+  button.md-close:hover i {
+    color: #000000; }
+  button.md-close i {
+    color: #aaaaaa; }
 
 .md-modal {
   position: fixed;
@@ -521,6 +511,17 @@ button.md-close {
       color: #777777; }
       .md-modal .md-content form select option {
         color: #000000; }
+    .md-modal .md-content form textarea {
+      color: #000000;
+      line-height: 26px;
+      background: none;
+      outline: none;
+      border: 1px #777777 solid;
+      border-radius: 2px;
+      padding: 10px 15px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      margin-bottom: 30px; }
     .md-modal .md-content form input:-moz-placeholder {
       font-size: 14px;
       color: #777777;
@@ -529,6 +530,21 @@ button.md-close {
       font-size: 14px;
       color: #777777;
       font-weight: 500; }
+    .md-modal .md-content form textarea:-moz-placeholder {
+      font-size: 14px;
+      color: #777777;
+      font-weight: 500; }
+    .md-modal .md-content form textarea::-webkit-input-placeholder {
+      font-size: 14px;
+      color: #777777;
+      font-weight: 500; }
+    .md-modal .md-content p.title-red {
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 40px;
+      color: #b20027;
+      text-align: center;
+      padding: 20px 0; }
     .md-modal .md-content p.text {
       font-size: 16px;
       line-height: 20px;
@@ -541,6 +557,40 @@ button.md-close {
         color: #b20027; }
         .md-modal .md-content p.text a:hover {
           color: #000000; }
+    .md-modal .md-content .buy-button {
+      padding: 25px 0;
+      color: #b20027;
+      background: #fff;
+      border-radius: 6px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+              box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15); }
+      .md-modal .md-content .buy-button:hover {
+        -webkit-box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+                box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease; }
+      .md-modal .md-content .buy-button span {
+        font-weight: 800;
+        font-size: 24px;
+        color: #b20027;
+        display: inline-block;
+        margin-bottom: 20px; }
+      .md-modal .md-content .buy-button img {
+        width: 65%; }
 
 .md-show {
   visibility: visible; }
@@ -581,21 +631,27 @@ button.md-close {
     .md-modal .md-content p.text {
       font-size: 14px;
       line-height: 18px;
-      margin-bottom: 25px; } }
+      margin-bottom: 25px; }
+  #modal-where-to-buy .md-content h2.modal-name {
+    margin: 0 auto 90px; } }
 
 @media (max-width: 769px) {
   .md-modal {
     height: 90%; }
     .md-modal .md-content {
       height: 100%;
-      overflow-y: scroll; }
+      overflow-y: auto; }
       .md-modal .md-content h2.modal-name {
         font-size: 32px;
         line-height: 42px; }
         .md-modal .md-content h2.modal-name:after {
           display: block; }
       .md-modal .md-content form .col-6 {
-        width: 100%; } }
+        width: 100%; }
+  #modal-where-to-buy {
+    height: auto; }
+  #modal-coupon {
+    height: auto; } }
 
 button.menu-btn {
   background: none;

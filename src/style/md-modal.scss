@@ -49,22 +49,13 @@ button.md-close {
   border: none;
   height: 30px;
   margin-left: 90%;
-  span {
-    width: 30px;
-    height: 1px;
-    background-color: #b3b3b3;
-    display: block;
-    &:first-child{
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+  &:hover{
+    i{
+      color: #000000;
     }
-    &:last-child{
-      -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      margin-top: -1px;
-    }
+  }
+  i{
+    color: #aaaaaa;
   }
 }
 
@@ -129,6 +120,17 @@ button.md-close {
           color: #000000;
         }
       }
+      textarea{
+        color: #000000;
+        line-height: 26px;
+        background: none;
+        outline: none;
+        border: 1px #777777 solid;
+        border-radius: 2px;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+      }
       input:-moz-placeholder{
         font-size: 14px;
         color: #777777;
@@ -140,8 +142,26 @@ button.md-close {
         color: #777777;
         font-weight: $medium;
       }
-    }
+      textarea:-moz-placeholder{
+        font-size: 14px;
+        color: #777777;
+        font-weight: $medium;
 
+      }
+      textarea::-webkit-input-placeholder {
+        font-size: 14px;
+        color: #777777;
+        font-weight: $medium;
+      }
+    }
+    p.title-red{
+      font-weight: $black;
+      font-size: 30px;
+      line-height: 40px;
+      color: #b20027;
+      text-align: center;
+      padding: 20px 0;
+    }
     p.text{
       font-size: 16px;
       line-height: 20px;
@@ -157,6 +177,30 @@ button.md-close {
         }
       }
     }
+    .buy-button{
+      padding: 25px 0;
+      color: #b20027;
+      background: #fff;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+      &:hover {
+        box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+        transition: all .5s ease;
+      }
+      span{
+        font-weight: $extra-bold;
+        font-size: 24px;
+        color: #b20027;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      img{
+        width: 65%;
+      }
+    }
   }
 }
 .md-show {
@@ -167,6 +211,7 @@ button.md-close {
 #modal-register{
 
 }
+
 #modal-1{
   .md-content {
     color: $color-modal-1;
@@ -212,13 +257,18 @@ button.md-close {
       }
     }
   }
+  #modal-where-to-buy{
+    .md-content h2.modal-name{
+      margin: 0 auto 90px;
+    }
+  }
 }
 @media (max-width: 769px) {
   .md-modal{
     height: 90%;
     .md-content{
       height: 100%;
-      overflow-y: scroll;
+      overflow-y: auto;
       h2.modal-name{
         font-size: 32px;
         line-height: 42px;
@@ -232,5 +282,12 @@ button.md-close {
         }
       }
     }
+  }
+  #modal-where-to-buy{
+    height: auto;
+
+  }
+  #modal-coupon{
+    height: auto;
   }
 }

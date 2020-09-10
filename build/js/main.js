@@ -36,8 +36,8 @@ $(document).ready(function () {
         dots: false,
         arrow: false,
         infinite: true,
-        // autoplay: true,
-        // autoplaySpeed: 4000,
+        autoplay: true,
+        autoplaySpeed: 4000,
         responsive: [
             {
                 breakpoint: 768,
