@@ -91,6 +91,7 @@
     margin: 30px 15px;
     position: relative;
     background-color: #000000;
+    cursor: auto;
     //min-height: 300px;
     &:hover{
       margin: 0 15px;
@@ -107,7 +108,8 @@
         color: #ffffff;
       }
       span.time,
-      a.button{
+      .button{
+        cursor: pointer;
         opacity: 1;
         visibility: visible;
         transition: opacity .5s ease;
@@ -139,13 +141,13 @@
       span{
         font-size: 12px;
         line-height: 20px;
-        color: #b20027;
-        font-weight: $light;
+        color: #E10031;
+        font-weight: 500;
         + span{
           margin-left: 20px;
         }
         .value{
-          font-weight: $medium;
+          font-weight: 600;
         }
       }
     }
@@ -168,9 +170,10 @@
       left: 0;
       top: 0;
     }
-    a.button{
+    .button{
       opacity: 0;
       visibility: hidden;
+      width: max-content;
     }
   }
 }
@@ -190,6 +193,9 @@
     .bottom-text {
       padding-top: 40px;
     }
+  }
+  .sect8-slick{
+    padding: 0;
   }
 }
 
@@ -223,7 +229,10 @@
   .sect8 {
     padding: 40px 0;
   }
-  .sect8-slick {
-     padding: 0 25px;
+  .sect8 .col-9{
+    width: calc(50% - 30px);
+  }
+  .sect8 .col-3{
+    width: calc(50% - 30px);
   }
 }

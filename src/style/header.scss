@@ -33,9 +33,13 @@ textarea{
 ::-webkit-scrollbar {
   width: 4px; }
 
+::selection {background: #b20027}
+::-moz-selection {background:#b20027;}
+::-webkit-selection {background: #b20027 }
+
 .back_to_top {
   position: fixed;
-  bottom: 80px;
+  bottom: 60px;
   right: 40px;
   z-index: 999;
   width: 30px;
@@ -46,19 +50,44 @@ textarea{
   cursor: pointer;
   border-radius: 2px;
   display: none;
-  opacity: .6; }
-.back_to_top .icon {
-  width: 30px;
-  height: 30px;
-  fill: #8ac71e; }
+  @media (max-width: 480px) {
+    right: 0;
+    bottom: 15px;
+  }
+}
+a.back_to_top{
+  padding: 30px;
+  &:hover{
+    .arrow{
+      span{
+        opacity: 1!important;
+        transition: opacity .5s ease;
+      }
+    }
+  }
+  .arrow{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    transform: rotate(180deg);
+    span{
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-bottom: 6px solid #b20027;
+      border-right: 6px solid #b20027;
+      transform: rotate(45deg);
+      margin: 0px;
+      &:nth-child(1){
+        opacity: .7;
+      }
+      &:nth-child(2){
+        opacity: .3;
+      }
+    }
+  }
+}
 
-.back_to_top:hover {
-  opacity: 1; }
-.back_to_top:hover .icon {
-  fill: #6fa909;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
 
 .back_to_top-show {
   display: block; }

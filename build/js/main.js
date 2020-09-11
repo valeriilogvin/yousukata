@@ -108,7 +108,10 @@ $(document).ready(function () {
                 breakpoint: 1025,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
                 }
             },
             {
@@ -116,9 +119,9 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    /*arrows: false,
+                    arrows: false,
                     autoplay: true,
-                    autoplaySpeed: 3000,*/
+                    autoplaySpeed: 3000,
                 }
             }
             // You can unslick at a given breakpoint now by adding:

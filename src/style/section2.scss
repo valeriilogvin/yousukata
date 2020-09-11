@@ -329,7 +329,13 @@
   }
 }
 @media (max-width: 1024px) {
+
   .sect2 {
+    .fixed-header{
+      .flex{
+        justify-content: space-between;
+      }
+    }
     .flex{
       justify-content: center;
     }
