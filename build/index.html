@@ -851,20 +851,19 @@
                         Morbi ac convallis augue. Donec condimentum dapibus tellus sed bibendum. Nam auctor nunc ac
                         lorem placerat, <a href="#">Warranty</a> ut viverra urna fermentum. Quisque a lacinia diam.
                     </p>
-                    <form action="" class="flex row">
-                        <input type="text" class="col-6" placeholder="Name">
-                        <input type="text" class="col-6" placeholder="E-mail">
-                        <input type="text" class="col-6" placeholder="Place of purchase (store etc.)">
-                        <input type="text" class="col-6" placeholder="Order ID">
-                        <select required="" class="col-12">
+                    <form action="" class="modal-form flex row">
+                        <input name="Name" type="text" class="col-6" placeholder="Name" required>
+                        <input name="E-mail" type="text" class="col-6" placeholder="E-mail" required>
+                        <input name="Place" type="text" class="col-6" placeholder="Place of purchase (store etc.)" required>
+                        <input name="Order" type="text" class="col-6" placeholder="Order ID" required>
+                        <select name="select" required class="col-12">
                             <option disabled="" selected="">Select purchased item</option>
                             <option value="type-of-work-1">one</option>
                             <option value="type-of-work-1">two</option>
                         </select>
+                        <div class="error"><span></span></div>
+                        <button class="button black" type="submit"><span class="back"></span>Register</button>
                     </form>
-                    <div class="text-center">
-                        <a href="" class="button black"><span class="back"></span>Register</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -883,14 +882,13 @@
                         faucibus
                         semper.
                     </p>
-                    <form action="" class="flex row">
-                        <input type="text" class="col-6" placeholder="Name">
-                        <input type="text" class="col-6" placeholder="E-mail">
+                    <form action="" class="modal-form flex row" method="post">
+                        <input name="Name2" type="text" class="col-6" placeholder="Name" required>
+                        <input name="E-mail2" type="text" class="col-6" placeholder="E-mail" required>
                         <textarea class="col-12" name="massage" rows="5" placeholder="Message"></textarea>
+                        <div class="error"><span></span></div>
+                        <button class="button black" type="submit"><span class="back"></span>Send</button>
                     </form>
-                    <div class="text-center">
-                        <a href="" class="button black"><span class="back"></span>Send</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -912,15 +910,14 @@
                         Morbi ac convallis augue. Donec condimentum dapibus tellus sed bibendum. Nam auctor nunc ac
                         lorem placerat, ut viverra urna fermentum. Quisque a lacinia diam.
                     </p>
-                    <form action="" class="flex row">
-                        <input type="text" class="col-6" placeholder="Name">
-                        <input type="text" class="col-6" placeholder="E-mail">
-                        <input type="text" class="col-6" placeholder="Contact person">
-                        <input type="text" class="col-6" placeholder="Phone">
+                    <form action="" class="modal-form flex row">
+                        <input name="Name" type="text" class="col-6" placeholder="Name" required>
+                        <input name="E-mail" type="text" class="col-6" placeholder="E-mail" required>
+                        <input name="contact" type="text" class="col-6" placeholder="Contact person" required>
+                        <input name="phone" type="text" class="col-6" placeholder="Phone" required>
+                        <div class="error"><span></span></div>
+                        <button class="button black" type="submit"><span class="back"></span>Send</button>
                     </form>
-                    <div class="text-center">
-                        <a href="" class="button black"><span class="back"></span>Send</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -938,12 +935,11 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac dui ipsum. Sed ac ante vitae
                         ipsum rutrum tincidunt quis ac dolor.
                     </p>
-                    <form action="" class="flex row">
-                        <input type="text" class="col-12" placeholder="Your e-mail here">
+                    <form action="" class="modal-form flex row">
+                        <input name="email" type="text" class="col-12" placeholder="Your e-mail here" required>
+                        <div class="error"><span></span></div>
+                        <button class="button black" type="submit"><span class="back"></span>Get my code</button>
                     </form>
-                    <div class="text-center">
-                        <a href="" class="button black"><span class="back"></span>Get my code</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -983,6 +979,7 @@
 <script src="slick/slick.min.js"></script>
 
 <script src="js/libs.min.js"></script>
+<script src="js/jquery.validate.js"></script>
 <script src="js/main.js?v=1.1"></script>
 <script>
 </script>

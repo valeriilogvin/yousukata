@@ -199,11 +199,59 @@ $('.sect8').on('click', '.js-show', function () {
 });
 
 // scroll to #block
-$("body").on('click', '[href*="#"]', function(e){
-    var fixed_offset = 100;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-    e.preventDefault();
+// $("body").on('click', '[href*="#"]', function(e){
+//     var fixed_offset = 100;
+//     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+//     e.preventDefault();
+// });
+
+// jQuery.validator.setDefaults({
+//     debug: true,
+//     success: "valid"
+// });
+
+$(".modal-form").each(function() {
+    $(this).validate({
+        debug: true,
+        success: "valid",
+        invalidHandler: function(event, validator) {
+            // 'this' refers to the form
+
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+                var message = 'Error! Fill the requested fields' ;
+                $(this).find("div.error span").html(message);
+                $(this).find("div.error").show();
+            } else {
+                $(this).find("div.error").hide();
+            }
+        },
+        submitHandler: function(form) {
+            // do other things for a valid form
+            form.submit();
+        }
+    });
 });
+/*
 
+var form = $( ".modal-form" );
+form.validate({
+    debug: true,
+    success: "valid",
+    invalidHandler: function(event, validator) {
+        // 'this' refers to the form
 
-
+        var errors = validator.numberOfInvalids();
+        if (errors) {
+            var message = 'Error! Fill the requested fields' ;
+            $(this).find("div.error span").html(message);
+            $(this).find("div.error").show();
+        } else {
+            $(this).find("div.error").hide();
+        }
+    },
+    submitHandler: function(form) {
+        // do other things for a valid form
+        form.submit();
+    }
+});*/

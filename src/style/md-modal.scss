@@ -101,6 +101,7 @@ button.md-close {
     }
 
     form{
+      position: relative;
       input,
       select{
         background: none;
@@ -113,6 +114,11 @@ button.md-close {
         line-height: 26px;
         padding: 0 20px;
         margin-bottom: 30px;
+        &.error{
+          border-bottom: 1px #ff0000 solid;
+
+        }
+
       }
       select{
         color: #777777;
@@ -152,6 +158,27 @@ button.md-close {
         font-size: 14px;
         color: #777777;
         font-weight: $medium;
+      }
+      label.error{
+        display: none!important;
+      }
+      div.error{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 60px;
+        span{
+          font-size: 12px;
+          font-weight: $medium;
+          color: #ff0000;
+        }
+      }
+      .button {
+        background: none;
+        margin: 20px auto 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
       }
     }
     p.title-red{
