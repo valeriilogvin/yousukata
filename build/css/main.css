@@ -3072,19 +3072,13 @@ button.my-slick-next {
     width: calc(100% - 30px); }
     .footer .flex .col-4:nth-child(1) {
       width: -webkit-calc(100% - 30px);
-      width: calc(100% - 30px);
-      text-align: center; }
+      width: calc(100% - 30px); }
     .footer .flex .col-4 + .col-4 {
       margin-top: 60px; }
   .footer .copyright span {
     padding-bottom: 60px;
     display: block;
-    text-align: center; }
-  .footer .social {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    margin: 0 auto; } }
+    text-align: center; } }
 
 @media (max-width: 480px) {
   .footer .copyright img.icons {

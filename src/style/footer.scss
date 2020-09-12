@@ -125,7 +125,6 @@
     }
   }
 }
-
 @media (max-width: 767px) {
   .footer{
     a.logo{
@@ -136,7 +135,6 @@
        width: calc(100% - 30px);
        &:nth-child(1) {
          width: calc(100% - 30px);
-         text-align: center;
        }
        + .col-4{
          margin-top: 60px;
@@ -147,10 +145,6 @@
       padding-bottom: 60px;
       display: block;
       text-align: center;
-    }
-    .social {
-      width: max-content;
-      margin: 0 auto;
     }
   }
 }
