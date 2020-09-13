@@ -3,6 +3,9 @@
   background: url("../img/sect3-bg.jpg") bottom center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  .flex.row{
+    align-items: flex-start;
+  }
   .logo{
     position: relative;
     img{

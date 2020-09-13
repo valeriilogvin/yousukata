@@ -48,6 +48,9 @@
   left: 50%;
   height: max-content;
   transform: translateX(-50%);
+  .container.flex{
+    align-items: center;
+  }
   a.logo{
     display: inherit;
     &:focus{

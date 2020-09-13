@@ -61,7 +61,7 @@ button.md-close {
 
 .md-modal {
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 50%;
   width: 80%;
   max-width: 1200px;
@@ -72,10 +72,7 @@ button.md-close {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-30%);
   .md-content {
     padding: 80px 100px;
     background: url("../img/sect2-bg.jpg") top center no-repeat;
@@ -211,11 +208,26 @@ button.md-close {
       border-radius: 6px;
       display: flex;
       flex-direction: column;
+      position: relative;
       align-items: center;
       box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
-      &:hover {
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+        border-radius: 6px;
+        width: 100%;
+        height: 100%;
         box-shadow: inset 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
-        transition: all .5s ease;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      &:hover{
+        box-shadow: none;
+        &:after {
+          opacity: 1;
+        }
       }
       span{
         font-weight: $extra-bold;
@@ -238,14 +250,10 @@ button.md-close {
 #modal-register{
 
 }
-
-#modal-1{
-  .md-content {
-    color: $color-modal-1;
-    background: $bg-modal-1;
-    position: relative;
-    border-radius: 3px;
-    margin: 0 auto;
+#modal-where-to-buy{
+  .md-content p.text{
+  font-size: 24px;
+  line-height: 34px;
   }
 }
 /* Individual modal styles with animations/transitions */
@@ -259,6 +267,7 @@ button.md-close {
 }
 @media (max-width: 1024px) {
   .md-modal{
+    width: 100%;
     .md-content{
       padding: 30px 40px;
 
@@ -270,7 +279,7 @@ button.md-close {
         }
       }
       h2.modal-name{
-        margin: 0 auto 60px;
+        margin: 0 auto 120px;
         font-size: 36px;
         width: max-content;
         &:after{
@@ -293,6 +302,8 @@ button.md-close {
 @media (max-width: 769px) {
   .md-modal{
     height: 90%;
+    max-height: 100vh;
+    overflow-y: auto;
     .md-content{
       height: 100%;
       overflow-y: auto;
@@ -312,9 +323,31 @@ button.md-close {
   }
   #modal-where-to-buy{
     height: auto;
-
+    .flex.row{
+      justify-content: center;
+    }
+    .col-6 {
+      width: 60%;
+      + .col-6{
+        margin-top: 30px;
+      }
+    }
+    .md-content p.text {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
   #modal-coupon{
     height: auto;
+  }
+}
+@media (max-width: 769px) {
+  #modal-where-to-buy{
+    .col-6 {
+      width: 80%;
+    }
+  }
+  .md-modal .md-content h2.modal-name {
+    margin: 0 auto 80px;
   }
 }
