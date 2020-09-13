@@ -46,10 +46,8 @@
   z-index: 1;
   top: 68px;
   left: 50%;
+  height: max-content;
   transform: translateX(-50%);
-  .container{
-    align-items: center;
-  }
   a.logo{
     display: inherit;
     &:focus{

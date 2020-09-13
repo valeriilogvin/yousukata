@@ -908,14 +908,12 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
   z-index: 1;
   top: 68px;
   left: 50%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%); }
-  .header .container {
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
   .header a.logo {
     display: inherit; }
     .header a.logo:focus {
@@ -1476,6 +1474,14 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
         display: block; }
         .fixed-header div.language .language_drop-down a + a {
           margin-top: 3px; }
+  .fixed-header a.button {
+    color: #e10031; }
+    .fixed-header a.button span.back {
+      border-right: 4px solid #e10031; }
+      .fixed-header a.button span.back:before {
+        background-color: #e10031; }
+      .fixed-header a.button span.back:after {
+        background-color: #e10031; }
 
 .fixed {
   opacity: 1;
@@ -2862,6 +2868,8 @@ button.my-slick-next {
         opacity: .3; }
       .sect8-slick .slide:hover .slide-title {
         background: none; }
+        .sect8-slick .slide:hover .slide-title span {
+          color: #ccc; }
       .sect8-slick .slide:hover h3 {
         color: #ffffff; }
       .sect8-slick .slide:hover span.time,
@@ -2919,11 +2927,23 @@ button.my-slick-next {
       left: 0;
       top: 0; }
     .sect8-slick .slide .button {
+      color: #e10031;
       opacity: 0;
       visibility: hidden;
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content; }
+      .sect8-slick .slide .button:hover {
+        color: #ffffff;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease; }
+      .sect8-slick .slide .button span.back {
+        border-right: 4px solid #e10031; }
+        .sect8-slick .slide .button span.back:before {
+          background-color: #e10031; }
+        .sect8-slick .slide .button span.back:after {
+          background-color: #e10031; }
 
 @media (max-width: 1280px) {
   .sect8 {

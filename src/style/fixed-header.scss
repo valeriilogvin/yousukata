@@ -153,6 +153,18 @@
       }
     }
   }
+  a.button{
+    color: #e10031;
+    span.back{
+      border-right: 4px solid #e10031;
+      &:before {
+        background-color: #e10031;
+      }
+      &:after {
+        background-color: #e10031;
+      }
+    }
+  }
 }
 .fixed {
   opacity: 1;

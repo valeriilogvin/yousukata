@@ -103,6 +103,9 @@
       }
       .slide-title{
         background: none;
+        span{
+          color: #ccc;
+        }
       }
       h3{
         color: #ffffff;
@@ -171,9 +174,24 @@
       top: 0;
     }
     .button{
+      color: #e10031;
       opacity: 0;
       visibility: hidden;
       width: max-content;
+      &:hover{
+        color: #ffffff;
+        transition: all .5s ease;
+      }
+      span.back{
+        border-right: 4px solid #e10031;
+        &:before {
+          background-color: #e10031;
+        }
+        &:after {
+          background-color: #e10031;
+        }
+      }
+
     }
   }
 }
