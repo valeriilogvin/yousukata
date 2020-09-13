@@ -1352,9 +1352,9 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
             align-items: center;
     padding: 0 20px; }
     .fixed-header .container.flex {
-      -webkit-flex-wrap: inherit;
-          -ms-flex-wrap: inherit;
-              flex-wrap: inherit; }
+      -webkit-flex-wrap: nowrap;
+          -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap; }
   .fixed-header a.logo {
     display: inherit; }
     .fixed-header a.logo:focus {
