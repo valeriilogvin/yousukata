@@ -74,6 +74,7 @@ button.md-close {
   backface-visibility: hidden;
   transform: translateX(-50%) translateY(-30%);
   .md-content {
+    border-radius: 5px;
     padding: 80px 100px;
     background: url("../img/sect2-bg.jpg") top center no-repeat;
     background-size: cover;
@@ -269,7 +270,7 @@ button.md-close {
   .md-modal{
     width: 100%;
     .md-content{
-      padding: 30px 40px;
+      padding: 60px 40px;
 
       > .flex.row{
         flex-wrap: wrap;
@@ -295,7 +296,7 @@ button.md-close {
   }
   #modal-where-to-buy{
     .md-content h2.modal-name{
-      margin: 0 auto 90px;
+      margin: 0 auto 120px;
     }
   }
 }
@@ -327,7 +328,7 @@ button.md-close {
       justify-content: center;
     }
     .col-6 {
-      width: 60%;
+      width: 80%;
       + .col-6{
         margin-top: 30px;
       }
@@ -340,14 +341,7 @@ button.md-close {
   #modal-coupon{
     height: auto;
   }
-}
-@media (max-width: 769px) {
-  #modal-where-to-buy{
-    .col-6 {
-      width: 80%;
-    }
-  }
   .md-modal .md-content h2.modal-name {
-    margin: 0 auto 80px;
+    margin: 0 auto 100px;
   }
 }
