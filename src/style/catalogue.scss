@@ -213,3 +213,41 @@
     }
   }
 }
+@media (max-width: 769px) {
+
+  .catalogue {
+    > .container {
+      > .flex {
+        flex-wrap: wrap;
+      }
+    }
+    .col-2{
+      width: calc(100% - 50px);
+    }
+    .col-10{
+      margin-top: 60px;
+      width: calc(100% - 50px);
+    }
+    .header .container.flex {
+      padding: 15px 10px;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .catalogue {
+    .col-10 {
+      .catalogue-item {
+        .catalogue-item-title {
+          h3{
+            margin : 0 auto;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .item{
+      width: 100%;
+      border-left: none!important;
+    }
+  }
+}

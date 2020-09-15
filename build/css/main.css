@@ -3365,3 +3365,26 @@ button.my-slick-next {
       border-left: none; }
     .catalogue .item:nth-child(2n) {
       border-left: 1px solid #e5e5e5; } }
+
+@media (max-width: 769px) {
+  .catalogue > .container > .flex {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .catalogue .col-2 {
+    width: -webkit-calc(100% - 50px);
+    width: calc(100% - 50px); }
+  .catalogue .col-10 {
+    margin-top: 60px;
+    width: -webkit-calc(100% - 50px);
+    width: calc(100% - 50px); }
+  .catalogue .header .container.flex {
+    padding: 15px 10px; } }
+
+@media (max-width: 580px) {
+  .catalogue .col-10 .catalogue-item .catalogue-item-title h3 {
+    margin: 0 auto;
+    text-align: center; }
+  .catalogue .item {
+    width: 100%;
+    border-left: none !important; } }
