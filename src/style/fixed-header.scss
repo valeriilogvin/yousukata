@@ -155,6 +155,9 @@
   }
   a.button{
     color: #e10031;
+    &:hover{
+      color: #ffffff;
+    }
     span.back{
       border-right: 4px solid #e10031;
       &:before {

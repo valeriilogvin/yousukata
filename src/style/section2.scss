@@ -25,6 +25,16 @@
         margin-top: auto;
       }
     }
+    &:hover{
+      .fire{
+        color: #000000;
+      }
+      .descriptions{
+        h3{
+          color: #b20027;
+        }
+      }
+    }
   }
   .deal_of_the_month{
     box-shadow: 0 1px 3px rgba(0,0,0,.5);

@@ -231,9 +231,12 @@
     .header .container.flex {
       padding: 15px 10px;
     }
+    .item{
+      padding: 15px 0 15px 20px;
+    }
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 480px) {
   .catalogue {
     .col-10 {
       .catalogue-item {
@@ -246,6 +249,7 @@
       }
     }
     .item{
+      padding: -15px 20px;
       width: 100%;
       border-left: none!important;
     }

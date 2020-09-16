@@ -10,6 +10,7 @@
     position: relative;
     img{
       width: 100%;
+      max-width: 320px;
     }
     &:after{
       position: absolute;
@@ -132,6 +133,7 @@
   .footer{
     a.logo{
       margin-bottom: 40px;
+      text-align: center;
     }
     .flex{
      .col-4{
@@ -147,6 +149,9 @@
     .copyright span {
       padding-bottom: 60px;
       display: block;
+      text-align: center;
+    }
+    .social {
       text-align: center;
     }
   }
