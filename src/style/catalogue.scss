@@ -2,6 +2,36 @@
   background-color: #ffffff;
   color: #000000;
   padding-top: 80px;
+  position: relative;
+
+  img.shrimp{
+    position: fixed;
+    left: -40px;
+    top: 60%;
+    transform: rotate(180deg);
+  }
+  img.parsley{
+    position: fixed;
+    right: 0;
+    top: 20%;
+  }
+
+  .breadcrumbs{
+    margin-top: 30px;
+    a{
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: $light;
+    }
+  }
+
+  .fixed-catalogue{
+    &.fixed{
+      margin-top: 100px;
+      width: calc(25% - 85px);
+    }
+  }
+
   h2{
     color: #000000;
     font-size: 40px;
@@ -23,6 +53,12 @@
       padding: 15px 20px;
     }
   }
+  .fixed-header{
+    background: rgba(51,51,51,.8);
+    .container.flex {
+      padding: 0 20px;
+    }
+  }
   > .container{
     > .flex{
       margin: 0 -25px;
@@ -42,7 +78,7 @@
           font-size: 18px;
           line-height: 42px;
           font-weight: $extra-bold;
-          border: 4px #777777 solid;
+          border: 4px #efefef solid;
           width: 100%;
           &:hover{
             color: #b20027;
@@ -100,11 +136,20 @@
     flex-direction: column;
     align-items: start;
     padding: 30px 0 30px 40px;
+    &:hover{
+      h3{
+        color: #b20027;
+      }
+    }
     & + .item{
       border-left: 1px solid #e5e5e5;
     }
     &:nth-child(5){
       border-left: none;
+    }
+    .img-block{
+      background: url("../img/sect2-items-bg.png") bottom center no-repeat;
+      background-size: contain;
     }
     img{
       width: 100%;
@@ -118,6 +163,7 @@
       }
     }
     .fire{
+      color: #fff;
       position: absolute;
       left: 50px;
       top: 15px;
@@ -151,6 +197,9 @@
     .button{
       font-size: 17px;
     }
+  }
+  .footer p.text{
+    color: #ffffff;
   }
 }
 @media (max-width: 1366px) {
@@ -223,6 +272,24 @@
     }
     .col-2{
       width: calc(100% - 50px);
+      .fixed-catalogue{
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative!important;
+        margin-top: 0;
+        &.fixed{
+          z-index: 0;
+          width: 100%;
+        }
+        li {
+          width: calc(50% - 7px);
+          +li{
+            margin-top: 0;
+            margin-bottom: 15px;
+          }
+        }
+      }
     }
     .col-10{
       margin-top: 60px;
@@ -238,6 +305,17 @@
 }
 @media (max-width: 480px) {
   .catalogue {
+    .col-2{
+      .fixed-catalogue{
+        li{
+          width: 100%;
+          + li{
+            margin-bottom: 0;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
     .col-10 {
       .catalogue-item {
         .catalogue-item-title {
@@ -252,6 +330,11 @@
       padding: -15px 20px;
       width: 100%;
       border-left: none!important;
+
+    }
+    img.parsley,
+    img.shrimp{
+      display: none;
     }
   }
 }

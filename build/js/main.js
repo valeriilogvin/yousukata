@@ -130,11 +130,12 @@ $('.sect8-slick').slick({
     ]
 });
 
+var $window = $(window);
+
 // fixed menu
 $(function(){
-    $nav = $('.fixed-header');
-    $window = $(window);
-    $h = $nav.offset().top;
+    var $nav = $('.fixed-header'),
+        $h = $nav.offset().top;
     $window.scroll(function(){
         if ($window.scrollTop() > $h){
             $nav.addClass('fixed');
@@ -143,6 +144,32 @@ $(function(){
         }
     });
 });
+
+// fixed menu on catalogue
+$(function(){
+    var $fixedCatalogueMenu = $('.js-fixed-catalogue'),
+        $h = $fixedCatalogueMenu.offset().top;
+    $window.scroll(function(){
+        if ($window.scrollTop() > $h){
+            $fixedCatalogueMenu.addClass('fixed');
+        } else {
+            $fixedCatalogueMenu.removeClass('fixed');
+        }
+    });
+});
+
+/*$(window).scroll(function() {
+    var top_of_element = $(".col-2").offset().top;
+    var bottom_of_element = $(".col-2").offset().top + $(".col-2").outerHeight();
+    var bottom_of_screen = $(window).scrollTop() + window.innerHeight();
+    var top_of_screen = $(window).scrollTop();
+
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+        // the element is visible, do something
+    } else {
+        // the element is not visible, do something else
+    }
+});*/
 
 // appearance & hiding of header-top
 (function($) {
