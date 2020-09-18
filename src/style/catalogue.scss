@@ -3,19 +3,6 @@
   color: #000000;
   padding-top: 80px;
   position: relative;
-
-  img.shrimp{
-    position: fixed;
-    left: -40px;
-    top: 60%;
-    transform: rotate(180deg);
-  }
-  img.parsley{
-    position: fixed;
-    right: 0;
-    top: 20%;
-  }
-
   .breadcrumbs{
     margin-top: 30px;
     a{
@@ -24,14 +11,12 @@
       font-weight: $light;
     }
   }
-
   .fixed-catalogue{
     &.fixed{
       margin-top: 100px;
       width: calc(25% - 85px);
     }
   }
-
   h2{
     color: #000000;
     font-size: 40px;
@@ -44,7 +29,6 @@
       left: -5px;
     }
   }
-
   .header{
     background: url("../img/bg.jpg") top center no-repeat;
     top: 0;
@@ -200,6 +184,17 @@
   }
   .footer p.text{
     color: #ffffff;
+  }
+  img.shrimp{
+    position: fixed;
+    left: -40px;
+    top: 60%;
+    transform: rotate(180deg);
+  }
+  img.parsley{
+    position: fixed;
+    right: 0;
+    top: 20%;
   }
 }
 @media (max-width: 1366px) {

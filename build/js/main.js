@@ -129,7 +129,23 @@ $('.sect8-slick').slick({
         // instead of a settings object
     ]
 });
-
+$('.wok-slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.wok-slider-nav'
+});
+$('.wok-slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.wok-slider-for',
+    dots: false,
+    prevArrow: '<button type="button" class="my-slick-prev"><i class="fas fa-chevron-left"></i></button>',
+    nextArrow: '<button type="button" class="my-slick-next"><i class="fas fa-chevron-right"></i></button>',
+    // centerMode: true,
+    focusOnSelect: true
+});
 var $window = $(window);
 
 // fixed menu
