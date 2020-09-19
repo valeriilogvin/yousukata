@@ -164,15 +164,50 @@ $(function(){
 // fixed menu on catalogue
 $(function(){
     var $fixedCatalogueMenu = $('.js-fixed-catalogue'),
-        $h = $fixedCatalogueMenu.offset().top;
+        $fixedCatalogueMenuContairer = $('.js-col-2'),
+        $elementTop = $fixedCatalogueMenu.offset().top,
+        $elementHeight = $fixedCatalogueMenu.outerHeight(),
+        $containerHeight = $fixedCatalogueMenuContairer.outerHeight();
+
     $window.scroll(function(){
-        if ($window.scrollTop() > $h){
-            $fixedCatalogueMenu.addClass('fixed');
-        } else {
-            $fixedCatalogueMenu.removeClass('fixed');
+        if (($window.scrollTop() > $elementTop - 100) && ($window.scrollTop() < $containerHeight - $elementHeight)){
+            $fixedCatalogueMenu.addClass('fixed').animate({
+                top: "100px",
+            }, 0, 'easy',);
+        }
+        else {
+            $fixedCatalogueMenu.removeClass('fixed').animate({
+                top: "0",
+            }, 0, 'easy',);
         }
     });
 });
+
+
+// fixed menu on catalogue
+$(function(){
+    $window.scroll(function(){
+        var ws = $window.scrollTop();
+        var $firstItem = $('.js-catalogue-item:nth-child(1)');
+        var $fixedCatalogue = $('.js-fixed-catalogue');
+        var $firstItemOffset = $firstItem.offset().top;
+        var $firstItemHeight = $firstItem.outerHeight();
+        var $secondItem = $('.js-catalogue-item:nth-child(2)');
+        var $secondItemOffset = $secondItem.offset().top;
+        var $secondItemHeight = $secondItem.outerHeight();
+        if ((ws > $firstItemOffset - 150)&&(ws <= $firstItemHeight  + 300)){
+            $fixedCatalogue.find('li:nth-child(1)').addClass('active')
+        }
+        else if ((ws > $secondItemOffset - 200) &&(ws <= $secondItemHeight  + 300) ){
+            $fixedCatalogue.find('li').removeClass('active')
+            $fixedCatalogue.find('li:nth-child(2)').addClass('active')
+        }
+        else {
+            $fixedCatalogue.find('li:nth-child(2)').removeClass('active')
+        }
+    });
+});
+
 
 /*$(window).scroll(function() {
     var top_of_element = $(".col-2").offset().top;

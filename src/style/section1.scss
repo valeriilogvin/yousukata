@@ -372,11 +372,6 @@
   margin-bottom: 0;
 }
 @media (max-width: 1366px) {
-  .header a.logo {
-    img{
-      width: 100px;
-    }
-  }
   .sect1-slick {
     .slider1 {
       h1 {
@@ -391,6 +386,11 @@
   }
 }
 @media (max-width: 1280px) {
+  .header a.logo {
+    img{
+      width: 100px;
+    }
+  }
   .header ul.navbar li a {
     font-size: 14px;
   }

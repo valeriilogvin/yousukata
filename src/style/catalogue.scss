@@ -13,7 +13,6 @@
   }
   .fixed-catalogue{
     &.fixed{
-      margin-top: 100px;
       width: calc(25% - 85px);
     }
   }
@@ -67,6 +66,12 @@
           &:hover{
             color: #b20027;
             border: 4px #b20027 solid;
+          }
+        }
+        &.active{
+          a{
+            color: #202540;
+            border: 4px #202540 solid;
           }
         }
       }

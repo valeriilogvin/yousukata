@@ -1265,8 +1265,6 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
   margin-bottom: 0; }
 
 @media (max-width: 1366px) {
-  .header a.logo img {
-    width: 100px; }
   .sect1-slick .slider1 h1 {
     font-size: 50px;
     line-height: 60px; }
@@ -1275,6 +1273,8 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     line-height: 40px; } }
 
 @media (max-width: 1280px) {
+  .header a.logo img {
+    width: 100px; }
   .header ul.navbar li a {
     font-size: 14px; } }
 
@@ -3198,7 +3198,6 @@ button.my-slick-next {
       line-height: 24px;
       font-weight: 300; }
   .catalogue .fixed-catalogue.fixed {
-    margin-top: 100px;
     width: -webkit-calc(25% - 85px);
     width: calc(25% - 85px); }
   .catalogue h2 {
@@ -3240,6 +3239,9 @@ button.my-slick-next {
       .catalogue .col-2 ul li a:hover {
         color: #b20027;
         border: 4px #b20027 solid; }
+    .catalogue .col-2 ul li.active a {
+      color: #202540;
+      border: 4px #202540 solid; }
   .catalogue .col-10 {
     margin: 0 25px;
     width: -webkit-calc(80% - 50px);
