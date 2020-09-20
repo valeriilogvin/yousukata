@@ -128,16 +128,16 @@
             <div class="flex">
                 <div class="col-2 js-col-2">
                     <ul class="fixed-catalogue js-fixed-catalogue">
-                        <li class="active"><a href="#">Steel Woks</a></li>
-                        <li><a href="#">Steel Pans</a></li>
-                        <li><a href="#">Cast Iron Woks</a></li>
-                        <li><a href="#">Cast Iron Pans</a></li>
-                        <li><a href="#">Lids</a></li>
-                        <li><a href="#">Accessories</a></li>
+                        <li class="active"><a href="#Steel-Woks">Steel Woks</a></li>
+                        <li><a href="#Steel-Pans">Steel Pans</a></li>
+                        <li><a href="#Cast-Iron-Woks">Cast Iron Woks</a></li>
+                        <li><a href="#Cast-Iron-Pans">Cast Iron Pans</a></li>
+                        <li><a href="#Lids">Lids</a></li>
+                        <li><a href="#Accessories">Accessories</a></li>
                     </ul>
                 </div>
                 <div class="col-10">
-                    <div class="catalogue-item js-catalogue-item">
+                    <div id="Steel-Woks" class="catalogue-item js-catalogue-item">
                         <div class="catalogue-item-title">
                             <h3>Steel Woks</h3>
                             <span class="line"></span>
@@ -270,7 +270,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="catalogue-item js-catalogue-item">
+                    <div id="Steel-Pans" class="catalogue-item js-catalogue-item">
                         <div class="catalogue-item-title">
                             <h3>Steel Pans</h3>
                             <span class="line"></span>
@@ -403,7 +403,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="catalogue-item">
+                    <div id="Cast-Iron-Woks" class="catalogue-item js-catalogue-item">
                         <div class="catalogue-item-title">
                             <h3>Cast Iron Woks</h3>
                             <span class="line"></span>
@@ -465,7 +465,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="catalogue-item">
+                    <div id="Cast-Iron-Pans" class="catalogue-item js-catalogue-item">
                         <div class="catalogue-item-title">
                             <h3>Cast Iron Pans</h3>
                             <span class="line"></span>
@@ -548,7 +548,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="catalogue-item">
+                    <div id="Lids" class="catalogue-item js-catalogue-item">
                         <div class="catalogue-item-title">
                             <h3>Lids</h3>
                             <span class="line"></span>
@@ -613,7 +613,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="catalogue-item">
+                    <div id="Accessories" class="catalogue-item js-catalogue-item">
                         <div class="catalogue-item-title">
                             <h3>Accessories</h3>
                             <span class="line"></span>
@@ -980,6 +980,59 @@
     <!--md-modal:end-->
 
 </body>
+
+<script>
+    // toggle class in fixed menu in catalogue
+    $(function(){
+        $window.scroll(function(){
+            var $fixedCatalogue = $('.js-fixed-catalogue');
+            var ws = $window.scrollTop() + 250;
+            var $firstItem = $('.js-catalogue-item:nth-child(1)');
+            var $secondItem = $('.js-catalogue-item:nth-child(2)');
+            var $thirdItem = $('.js-catalogue-item:nth-child(3)');
+            var $fourthItem = $('.js-catalogue-item:nth-child(4)');
+            var $fifthItem = $('.js-catalogue-item:nth-child(5)');
+            var $sixthItem = $('.js-catalogue-item:nth-child(6)');
+            var $firstItemOffset = $firstItem.offset().top;
+            var $firstItemHeight = $firstItem.outerHeight();
+            var $secondItemOffset = $secondItem.offset().top;
+            var $thirdItemOffset = $thirdItem.offset().top;
+            var $fourthItemOffset = $fourthItem.offset().top;
+            var $fifthItemOffset = $fifthItem.offset().top;
+            var $sixthItemOffset = $sixthItem.offset().top;
+
+            if ((ws > $firstItemOffset - 150)&&(ws <= $firstItemHeight  + 300)){
+                $fixedCatalogue.find('li').removeClass('active')
+                $fixedCatalogue.find('li:nth-child(1)').addClass('active')
+            }
+            if (ws > $secondItemOffset) {
+                $fixedCatalogue.find('li').removeClass('active')
+                $fixedCatalogue.find('li:nth-child(2)').addClass('active')
+            }
+            if (ws > $thirdItemOffset) {
+                $fixedCatalogue.find('li').removeClass('active')
+                $fixedCatalogue.find('li:nth-child(3)').addClass('active')
+            }
+            if (ws > $thirdItemOffset) {
+                $fixedCatalogue.find('li').removeClass('active')
+                $fixedCatalogue.find('li:nth-child(3)').addClass('active')
+            }
+            if (ws > $fourthItemOffset) {
+                $fixedCatalogue.find('li').removeClass('active')
+                $fixedCatalogue.find('li:nth-child(4)').addClass('active')
+            }
+            if (ws > $fifthItemOffset) {
+                $fixedCatalogue.find('li').removeClass('active')
+                $fixedCatalogue.find('li:nth-child(5)').addClass('active')
+            }
+            if (ws > $sixthItemOffset) {
+                $fixedCatalogue.find('li').removeClass('active')
+                $fixedCatalogue.find('li:nth-child(6)').addClass('active')
+            }
+
+        });
+    });
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="slick/slick.min.js"></script>

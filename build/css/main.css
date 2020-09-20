@@ -1386,6 +1386,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
   width: 100%; }
 
 .fixed-header {
+  padding: 15px 0;
   background: rgba(51, 51, 51, 0.8);
   opacity: 0;
   visibility: hidden; }
@@ -1411,7 +1412,6 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
     .fixed-header ul.navbar > li {
       position: relative; }
     .fixed-header ul.navbar li {
-      padding: 26px 0;
       display: inline-block; }
       .fixed-header ul.navbar li + li {
         margin-left: 30px; }
@@ -1538,8 +1538,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
   visibility: visible;
   width: 100%;
   position: fixed;
-  z-index: 99;
-  top: 0; }
+  z-index: 99; }
 
 @media (max-width: 1280px) {
   .fixed-header a.logo img {
@@ -1553,7 +1552,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
 
 @media (max-width: 767px) {
   .fixed-header .container {
-    padding: 10px 10px; } }
+    padding: 0 10px; } }
 
 @media (max-width: 380px) {
   .fixed-header a.logo img {
@@ -3198,8 +3197,17 @@ button.my-slick-next {
       line-height: 24px;
       font-weight: 300; }
   .catalogue .fixed-catalogue.fixed {
-    width: -webkit-calc(25% - 85px);
-    width: calc(25% - 85px); }
+    top: 100px;
+    width: 242px; }
+    @media (max-width: 1600px) {
+      .catalogue .fixed-catalogue.fixed {
+        width: 212px; } }
+    @media (max-width: 1366px) {
+      .catalogue .fixed-catalogue.fixed {
+        width: 196px; } }
+    @media (max-width: 1280px) {
+      .catalogue .fixed-catalogue.fixed {
+        width: 192.5px; } }
   .catalogue h2 {
     color: #000000;
     font-size: 40px;
@@ -3211,15 +3219,12 @@ button.my-slick-next {
       bottom: 50px;
       left: -5px; }
   .catalogue .header {
+    padding: 15px 0;
     background: url("../img/bg.jpg") top center no-repeat;
     top: 0;
     width: 100%; }
-    .catalogue .header .container.flex {
-      padding: 15px 20px; }
   .catalogue .fixed-header {
     background: rgba(51, 51, 51, 0.8); }
-    .catalogue .fixed-header .container.flex {
-      padding: 0 20px; }
   .catalogue > .container > .flex {
     margin: 0 -25px; }
   .catalogue .col-2 {
@@ -3325,7 +3330,8 @@ button.my-slick-next {
       -webkit-box-flex: 1;
       -webkit-flex-grow: 1;
           -ms-flex-positive: 1;
-              flex-grow: 1; }
+              flex-grow: 1;
+      width: 100%; }
       .catalogue .item .descriptions .flex {
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
@@ -3455,8 +3461,6 @@ button.my-slick-next {
     margin-top: 60px;
     width: -webkit-calc(100% - 50px);
     width: calc(100% - 50px); }
-  .catalogue .header .container.flex {
-    padding: 15px 10px; }
   .catalogue .item {
     padding: 15px 0 15px 20px; } }
 
@@ -3470,7 +3474,7 @@ button.my-slick-next {
     margin: 0 auto;
     text-align: center; }
   .catalogue .item {
-    padding: -15px 20px;
+    padding: 15px 20px;
     width: 100%;
     border-left: none !important; }
   .catalogue img.parsley,
