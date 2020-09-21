@@ -149,11 +149,16 @@ $('.wok-slider-nav').slick({
 
 });
 
-// якорные ссылки
-$("body").on('click', '[href*="#"]', function(e){
-    var fixed_offset = 100;
-    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-    e.preventDefault();
+//anchor
+$(document).ready(function(){
+    $("").on("click","a", function (event) {
+        event.preventDefault();
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top - 100;
+
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
 });
 
 // fixed menu
@@ -169,36 +174,7 @@ $(function(){
     });
 });
 
-// fixed menu in catalogue
-$(function(){
-    var $fixedCatalogueMenu = $('.js-fixed-catalogue'),
-        $fixedCatalogueMenuContairer = $('.js-col-2'),
-        $elementTop = $fixedCatalogueMenu.offset().top,
-        $elementHeight = $fixedCatalogueMenu.outerHeight(),
-        $containerHeight = $fixedCatalogueMenuContairer.outerHeight();
 
-    $window.scroll(function(){
-        if (($window.scrollTop() > $elementTop - 100) && ($window.scrollTop() < $containerHeight - 250)){
-            $fixedCatalogueMenu.addClass('fixed');
-        }
-        else {
-            $fixedCatalogueMenu.removeClass('fixed');
-        }
-    });
-});
-
-/*$(window).scroll(function() {
-    var top_of_element = $(".col-2").offset().top;
-    var bottom_of_element = $(".col-2").offset().top + $(".col-2").outerHeight();
-    var bottom_of_screen = $(window).scrollTop() + window.innerHeight();
-    var top_of_screen = $(window).scrollTop();
-
-    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
-        // the element is visible, do something
-    } else {
-        // the element is not visible, do something else
-    }
-});*/
 
 // appearance & hiding of header-top
 (function($) {
@@ -222,30 +198,22 @@ $(function(){
 });
 
 // button back_to_top
-(function() {
-    'use strict';
-    function trackScroll() {
-        var scrolled = window.pageYOffset;
-        var coords = document.documentElement.clientHeight;
-        if (scrolled > coords) {
-            goTopBtn.classList.add('back_to_top-show');
+$(document).ready(function() {
+    var button = $('.back_to_top');
+    $(window).scroll (function () {
+        if ($(this).scrollTop () > 300) {
+            button.fadeIn();
+        } else {
+            button.fadeOut();
         }
-        if (scrolled < coords) {
-            goTopBtn.classList.remove('back_to_top-show');
-        }
-    }
-    function backToTop() {
-        if (window.pageYOffset > 0) {
-            window.scrollBy(0, -80);
-            setTimeout(backToTop, 0);
-        }
-    }
-    var goTopBtn = document.querySelector('.back_to_top');
-    if(goTopBtn === null)
-        return;//sm
-    window.addEventListener('scroll', trackScroll);
-    goTopBtn.addEventListener('click', backToTop);
-})();
+    });
+    button.on('click', function(){
+        $('body, html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+});
 
 // show/hide text on .sect8
 $('.sect8').on('click', '.js-show', function () {
@@ -254,18 +222,7 @@ $('.sect8').on('click', '.js-show', function () {
     $(this).text(hBlock.is(':visible') ? 'Hide text' : 'Show full text');
 });
 
-// scroll to #block
-// $("body").on('click', '[href*="#"]', function(e){
-//     var fixed_offset = 100;
-//     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
-//     e.preventDefault();
-// });
-
-// jQuery.validator.setDefaults({
-//     debug: true,
-//     success: "valid"
-// });
-
+//validation settings
 $(".modal-form").each(function() {
     $(this).validate({
         debug: true,
@@ -288,26 +245,3 @@ $(".modal-form").each(function() {
         }
     });
 });
-/*
-
-var form = $( ".modal-form" );
-form.validate({
-    debug: true,
-    success: "valid",
-    invalidHandler: function(event, validator) {
-        // 'this' refers to the form
-
-        var errors = validator.numberOfInvalids();
-        if (errors) {
-            var message = 'Error! Fill the requested fields' ;
-            $(this).find("div.error span").html(message);
-            $(this).find("div.error").show();
-        } else {
-            $(this).find("div.error").hide();
-        }
-    },
-    submitHandler: function(form) {
-        // do other things for a valid form
-        form.submit();
-    }
-});*/

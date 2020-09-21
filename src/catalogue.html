@@ -987,6 +987,25 @@
 <script src="slick/slick.min.js"></script>
 
 <script>
+
+    // fixed menu in catalogue
+    $(function(){
+        var $fixedCatalogueMenu = $('.js-fixed-catalogue'),
+            $fixedCatalogueMenuContairer = $('.js-col-2'),
+            $elementTop = $fixedCatalogueMenu.offset().top,
+            $elementHeight = $fixedCatalogueMenu.outerHeight(),
+            $containerHeight = $fixedCatalogueMenuContairer.outerHeight();
+
+        $window.scroll(function(){
+            if (($window.scrollTop() > $elementTop - 100) && ($window.scrollTop() < $containerHeight - 250)){
+                $fixedCatalogueMenu.addClass('fixed');
+            }
+            else {
+                $fixedCatalogueMenu.removeClass('fixed');
+            }
+        });
+    });
+
     // toggle class in fixed menu in catalogue
     $(function(){
         var $window = $(window);
