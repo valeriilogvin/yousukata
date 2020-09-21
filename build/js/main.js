@@ -146,6 +146,7 @@ $('.wok-slider-nav').slick({
     nextArrow: '<button type="button" class="my-slick-next"><i class="fas fa-chevron-right"></i></button>',
     // centerMode: true,
     focusOnSelect: true
+
 });
 
 // якорные ссылки

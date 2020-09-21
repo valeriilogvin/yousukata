@@ -128,7 +128,7 @@
             <div class="flex">
                 <div class="col-2 js-col-2">
                     <ul class="fixed-catalogue js-fixed-catalogue">
-                        <li class="active"><a href="#Steel-Woks">Steel Woks</a></li>
+                        <li><a href="#Steel-Woks">Steel Woks</a></li>
                         <li><a href="#Steel-Pans">Steel Pans</a></li>
                         <li><a href="#Cast-Iron-Woks">Cast Iron Woks</a></li>
                         <li><a href="#Cast-Iron-Pans">Cast Iron Pans</a></li>
@@ -981,9 +981,15 @@
 
 </body>
 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="slick/slick.min.js"></script>
+
 <script>
     // toggle class in fixed menu in catalogue
     $(function(){
+        var $window = $(window);
         $window.scroll(function(){
             var $fixedCatalogue = $('.js-fixed-catalogue');
             var ws = $window.scrollTop() + 250;
@@ -1034,8 +1040,6 @@
     });
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="slick/slick.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/main.js?v=1.1"></script>
 

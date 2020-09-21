@@ -368,6 +368,7 @@ h4{
 }
 .col-3,
 .col-6,
+.col-5,
 .col-4,
 .col-9,
 .col-12{
@@ -381,6 +382,9 @@ h4{
 }
 .col-6{
   width: calc( 50% - 30px);
+}
+.col-5{
+  width: calc( 20% - 30px);
 }
 .col-8{
   width: calc( 66% - 30px);
