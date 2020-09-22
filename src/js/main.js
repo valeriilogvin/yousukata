@@ -149,9 +149,9 @@ $('.wok-slider-nav').slick({
 
 });
 
-//anchor
+//anchor fixed-catalogue
 $(document).ready(function(){
-    $("").on("click","a", function (event) {
+    $(".fixed-catalogue").on("click","a", function (event) {
         event.preventDefault();
 
         var id  = $(this).attr('href'),

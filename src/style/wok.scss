@@ -5,18 +5,13 @@
   position: relative;
 
   .header{
+    padding: 15px 0;
     background: url("../img/bg.jpg") top center no-repeat;
     top: 0;
     width: 100%;
-    .container.flex{
-      padding: 15px 20px;
-    }
   }
   .fixed-header{
     background: rgba(51,51,51,.8);
-    .container.flex {
-      padding: 0 20px;
-    }
   }
   .breadcrumbs{
     margin: 30px 0 50px;
@@ -384,13 +379,132 @@ span{
 }
 @media (max-width: 1280px) {
   .wok {
-    /*.col-6{
-      &:nth-child(1){
-        width: 55%;
+    .wok-description {
+      .col-6{
+        &:nth-child(1) {
+          width: 75%;
+        }
+        &:nth-child(2) {
+          width: 25%;
+        }
       }
-      &:nth-child(2){
-        width: 45%;
+      h2{
+        font-size: 20px;
+        line-height: 28px;
       }
-    }*/
+      ul li {
+        + li {
+          margin-top: 3px;
+        }
+        span{
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+    .text-block.col-8{
+      width: 100%;
+    }
+    .sect3{
+      .col-8{
+        width: 100%;
+      }
+    }
+    .wok-sect4{
+      .flex{
+        justify-content: center;
+      }
+      .item{
+        width: calc(33% - 30px);
+        .fire{
+          left: 25px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .wok{
+    .sect1{
+      .flex{
+        flex-wrap: wrap;
+      }
+      .col-6{
+        width: 100%;
+        margin: 0;
+        &:nth-child(1){
+          order: 1;
+        }
+        &:nth-child(2){
+          order: 0;
+          margin: 0;
+        }
+      }
+    }
+    .wok-description {
+      > .flex{
+        margin: 0;
+      }
+      padding-bottom: 50px;
+      .col-6 {
+        &:nth-child(1) {
+          width: calc(75% - 50px);
+          order: 0;
+        }
+
+        &:nth-child(2) {
+          order: 1;
+          width: calc(25% - 50px);
+        }
+      }
+    }
+    .sect3 {
+      padding: 35px 0;
+    }
+    .sect2 {
+      padding: 35px 0;
+    }
+    .wok-sect4{
+      .item{
+        width: calc(100% - 30px);
+      }
+    }
+  }
+  p.text-block {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  span.title-h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .wok{
+    .wok-description {
+      padding-bottom: 50px;
+      .col-6 {
+        &:nth-child(1) {
+          width: 100%;
+          order: 1;
+        }
+
+        &:nth-child(2) {
+          width: 100%;
+          align-items: flex-start;
+          margin-bottom: 30px;
+          order: 0;
+        }
+      }
+    }
+    .wok-slider-for {
+      .slide {
+        height: 330px;
+        img{
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
   }
 }
