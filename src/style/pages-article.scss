@@ -1,0 +1,223 @@
+.blog-article{
+  h1{
+    color: #000000;
+    position: relative;
+    font-size: 40px;
+    line-height: 50px;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+    font-weight: $black;
+    &:after {
+      position: absolute;
+      content: url(../img/headline_pages_curve.png);
+      bottom: 18px;
+      left: -5px;
+    }
+  }
+  .img{
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  .video-block{
+    margin-top: 70px;
+  }
+  div.center{
+    .flex.row.col-8{
+      width: 66%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .share{
+    text-align: right;
+    position: relative;
+    z-index: 1;
+    div{
+      background: #ffffff;
+      display: inline-block;
+    }
+    &:after{
+      z-index: -1;
+      position: absolute;
+      content: '';
+      top: 60%;
+      transform: translateY(-50%);
+      width: 100%;
+      background: #e8e9ec;
+      height: 4px;
+      left: 0;
+    }
+    p{
+      font-weight: $medium;
+      padding:0 45px;
+      display: inline-block;
+    }
+    a{
+      + a{
+        margin-left: 25px;
+      }
+      &:hover{
+        i{
+          color: #b20027;
+        }
+      }
+      i{
+        font-size: 16px;
+        color: #202640;
+      }
+    }
+  }
+  .sect-blog-bottom{
+    h2{
+      color: #000000;
+      position: relative;
+      padding-bottom: 35px;
+      &:after {
+        position: absolute;
+        content: url(../img/headline_pages_curve.png);
+        bottom: 18px;
+        left: -5px;
+      }
+    }
+  }
+}
+.img-block{
+  img{
+    width: 100%;
+    display: block;
+  }
+}
+.img-block-hover{
+  position: relative;
+  &:hover{
+    &:after{
+      opacity: 1;
+    }
+  }
+  &:after{
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(178,0, 39, .25);
+    content: '';
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+}
+.blog-article-slider{
+  .slick-list{
+    margin: 0 -15px;
+  }
+  .slider{
+    margin: 0 15px;
+  }
+  button.my-slick-next {
+    right: -60px;
+  }
+  button.my-slick-prev {
+    left: -60px;
+  }
+  .slick-dots {
+    bottom: -40px;
+    li {
+      width: 6px;
+      height: 6px;
+      margin: 0 9px;
+      &.slick-active{
+        width: 12px;
+        button{
+          width: 12px;
+          height: 12px;
+          background: #202640;
+        }
+      }
+      button {
+        content: '';
+        padding: 0;
+        width: 6px;
+        height: 6px;
+        background: #bfbfbf;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.sect-blog-bottom-slider {
+  margin: 20px -15px 120px;
+  .slider {
+    margin: 0 15px;
+    a {
+      position: relative;
+      min-height: 220px;
+      width: 100%;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 1);
+      border-radius: 4px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover  ;
+      &:hover{
+        &:before{
+          background: rgba(255,255,255,.2);
+        }
+      }
+      &:before{
+        border-radius: 4px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: '';
+      }
+      i{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #ffffff;
+      }
+    }
+  }
+  .watch{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    img{
+      width: 100%;
+    }
+    &:after{
+      position: absolute;
+      content:'' ;
+      top: 50%;
+      left: 50%;
+      transform: translate(-20%, -50%);
+      border: 15px solid transparent;
+      border-left: 20px solid #ffffff;
+    }
+  }
+  p.title{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: $medium;
+  }
+  span.text{
+    display: block;
+    font-size: 12px;
+    font-weight: $regular;
+    line-height: 20px;
+  }
+}
