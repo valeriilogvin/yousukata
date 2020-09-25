@@ -4310,3 +4310,209 @@ button.my-slick-next {
   .blog-article h1 {
     font-size: 22px;
     line-height: 36px; } }
+
+.recipes-article p.title {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 900;
+  padding-bottom: 20px; }
+
+.recipes-article .sect-main {
+  position: relative;
+  overflow: hidden; }
+  .recipes-article .sect-main .col-5 {
+    position: relative;
+    z-index: 2;
+    width: -webkit-calc(40% - 30px);
+    width: calc(40% - 30px); }
+    .recipes-article .sect-main .col-5 img {
+      width: 100%;
+      height: auto; }
+  .recipes-article .sect-main .col-7 {
+    width: -webkit-calc(60% - 30px);
+    width: calc(60% - 30px); }
+    .recipes-article .sect-main .col-7 h1 {
+      color: #000000;
+      padding-bottom: 40px;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 46px;
+      position: relative; }
+      .recipes-article .sect-main .col-7 h1:after {
+        position: absolute;
+        content: url(../img/headline_pages_curve.png);
+        bottom: 18px;
+        left: -5px; }
+  .recipes-article .sect-main .info {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: relative;
+    z-index: 1; }
+    .recipes-article .sect-main .info:after {
+      position: absolute;
+      background: #f7f7f7;
+      content: '';
+      left: -100px;
+      height: 100%;
+      width: 2000px;
+      z-index: -1; }
+    .recipes-article .sect-main .info span {
+      color: #b20027;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 100px; }
+      .recipes-article .sect-main .info span + span {
+        margin-left: 80px; }
+      .recipes-article .sect-main .info span.time {
+        padding-left: 20px;
+        position: relative; }
+        .recipes-article .sect-main .info span.time:before {
+          content: url("../img/clock.png");
+          left: 0;
+          position: absolute;
+          top: 3px; }
+      .recipes-article .sect-main .info span .text {
+        font-size: 18px;
+        color: #000000;
+        font-weight: 400;
+        padding-left: 7px; }
+  .recipes-article .sect-main .ingredients {
+    padding-top: 60px; }
+    .recipes-article .sect-main .ingredients ul li {
+      font-size: 18px;
+      font-weight: 400;
+      padding-left: 35px;
+      position: relative; }
+      .recipes-article .sect-main .ingredients ul li + li {
+        margin-top: 10px; }
+      .recipes-article .sect-main .ingredients ul li:before {
+        position: absolute;
+        content: '';
+        width: 5px;
+        height: 4px;
+        background: #b20027;
+        left: 10px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
+  .recipes-article .sect-main .instructions {
+    padding: 80px 0;
+    margin: 0 auto; }
+    .recipes-article .sect-main .instructions ul li {
+      font-size: 18px;
+      width: 400; }
+      .recipes-article .sect-main .instructions ul li .num {
+        font-weight: 900;
+        padding-right: 15px; }
+  .recipes-article .sect-main .limes {
+    position: absolute;
+    right: 0;
+    bottom: 20%; }
+
+.recipes-article .sect2 {
+  position: relative;
+  padding-bottom: 150px !important; }
+  .recipes-article .sect2 p.title {
+    text-align: left;
+    margin-right: auto; }
+  .recipes-article .sect2 .avocado {
+    position: absolute;
+    right: 0;
+    bottom: 20%; }
+  .recipes-article .sect2 .big_pepper {
+    left: 0;
+    top: 30%;
+    position: absolute; }
+
+.recipes-article .more-recipes {
+  background: url("../img/sect2-bg.jpg") top center no-repeat;
+  background-size: cover;
+  padding-bottom: 80px; }
+  .recipes-article .more-recipes h2 {
+    padding-top: 130px;
+    color: #000000;
+    position: relative;
+    padding-bottom: 40px; }
+    .recipes-article .more-recipes h2:after {
+      position: absolute;
+      content: url(../img/headline_pages_curve.png);
+      bottom: 18px;
+      left: -5px; }
+
+@media (max-width: 1366px) {
+  .recipes-article .sect-main .info span {
+    line-height: 80px; }
+  .recipes-article .sect-main .ingredients {
+    padding-top: 35px; }
+  .recipes-article .sect-main .ingredients ul li + li {
+    margin-top: 8px; } }
+
+@media (max-width: 1280px) {
+  .recipes-article .sect-main .col-7 h1 {
+    font-size: 30px;
+    line-height: 40px; }
+  .recipes-article .col-8 {
+    width: 100%; }
+  .recipes-article .sect-main .limes {
+    bottom: 30%; } }
+
+@media (max-width: 1024px) {
+  .recipes-article .flex.row {
+    margin: 0; }
+  .recipes-article .sect-main .col-5 {
+    position: absolute;
+    top: 200px;
+    width: 250px;
+    margin: 0; }
+  .recipes-article .sect-main .col-7 {
+    width: 100%; }
+  .recipes-article .sect-main .info:after {
+    left: -200px;
+    height: 100%;
+    width: 2000px; }
+  .recipes-article .sect-main .ingredients {
+    padding-left: 300px; }
+  .recipes-article .limes,
+  .recipes-article .avocado,
+  .recipes-article .big_pepper {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .recipes-article .sect-main .col-7 h1 {
+    font-size: 26px;
+    line-height: 36px; }
+  .recipes-article .sect-main .info span + span {
+    margin-left: 45px; }
+  .recipes-article .sect-main .ingredients {
+    padding-top: 450px;
+    padding-left: 0; } }
+
+@media (max-width: 480px) {
+  .recipes-article .sect-main .col-5 {
+    top: 235px; }
+  .recipes-article .sect-main .col-7 h1 {
+    font-size: 22px;
+    line-height: 32px; }
+  .recipes-article .sect-main .info {
+    padding: 10px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .recipes-article .sect-main .info:after {
+      top: 0; }
+    .recipes-article .sect-main .info span {
+      line-height: 40px; }
+      .recipes-article .sect-main .info span + span {
+        margin-left: 0; }
+  .recipes-article .sect-main .ingredients {
+    padding-top: 400px; }
+  .recipes-article .more-recipes h2 {
+    padding-top: 50px;
+    padding-bottom: 0; }
+  .recipes-article .sect2 {
+    padding-bottom: 100px !important; } }
