@@ -194,13 +194,19 @@ $('.sect-blog-bottom-slider').slick({
     autoplaySpeed: 4000,
     responsive: [
         {
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false,
+            }
+        },
+        {
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
-                autoplay: true,
-                autoplaySpeed: 4000,
             }
         }
         // You can unslick at a given breakpoint now by adding:
