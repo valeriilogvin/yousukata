@@ -64,12 +64,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    &:hover{
-      &:before{
-        background: rgba(255,255,255,.2);
-      }
-    }
-    &:before{
+    .background{
       border-radius: 4px;
       position: absolute;
       width: 100%;
@@ -78,29 +73,39 @@
       left: 0;
       content: '';
     }
-    i{
+    &:hover{
+      .background {
+        transition: all .5s ease;
+        background: rgba(255, 255, 255, .2);
+      }
+    }
+
+    i.icon{
+      display: inline-block;
       position: absolute;
       top: 10px;
-      right: 10px;
       color: #ffffff;
+      right: 35px;
+      font-size: 18px;
+      &:before {
+        position: absolute;
+        font-weight: 900;
+      }
+
     }
-  }
-  .watch{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    img{
-      width: 100%;
+    &.video{
+      i.icon{
+        &:before{
+          content: "\f03d";
+        }
+      }
     }
-    &:after{
-      position: absolute;
-      content:'' ;
-      top: 50%;
-      left: 50%;
-      transform: translate(-20%, -50%);
-      border: 25px solid transparent;
-      border-left: 30px solid #ffffff;
+    &.articles{
+      i.icon{
+        &:before{
+          content: "\f036";
+        }
+      }
     }
   }
   p.title{
@@ -108,9 +113,6 @@
     color: #ffffff;
     font-size: 22px;
     font-weight: $medium;
-  }
-  p.text{
-
   }
   .slider-row{
     width: 70%;
@@ -171,6 +173,33 @@
   .slider-column-bottom{
     background: url("../img/sect4-slider-col2.png.jpg") center center no-repeat;
     background-size: cover;
+  }
+}
+.blog-article{
+  &.video{
+    position: relative;
+    z-index: 10;
+    &:before{
+      z-index: 10;
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 176px;
+      height: 176px;
+      background: url("../img/play.png");
+    }
+    &:after{
+      z-index: 10;
+      position: absolute;
+      content:'' ;
+      top: 50%;
+      left: 50%;
+      transform: translate(-20%, -50%);
+      border: 25px solid transparent;
+      border-left: 30px solid #ffffff;
+    }
   }
 }
 .sect4-slick-mobile {
