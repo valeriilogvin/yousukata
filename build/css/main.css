@@ -4644,3 +4644,143 @@ button.my-slick-next {
 @media (max-width: 380px) {
   .blog .blog-article {
     height: 150px; } }
+
+.recipes .container-recipe {
+  margin-bottom: 100px; }
+
+.recipes h2 {
+  color: #000000;
+  font-size: 40px;
+  padding-bottom: 70px;
+  position: relative; }
+  .recipes h2:after {
+    position: absolute;
+    content: url("../img/headline_pages_curve.png");
+    bottom: 50px;
+    left: -5px; }
+
+.recipes .flex.row {
+  margin: -15px; }
+  .recipes .flex.row .col-6 {
+    margin: 15px; }
+
+.recipes .recipe {
+  border-radius: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15); }
+  .recipes .recipe:hover .description {
+    width: -webkit-calc(45% + 30px);
+    width: calc(45% + 30px);
+    background: #fff;
+    padding-right: 60px;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease; }
+
+.recipes .description {
+  width: 45%;
+  padding: 30px 30px 45px 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: rgba(255, 255, 255, 0.9); }
+  .recipes .description .time {
+    margin-bottom: auto;
+    color: #000000;
+    font-size: 14px;
+    padding-left: 30px;
+    font-weight: 600;
+    position: relative; }
+    .recipes .description .time:before {
+      position: absolute;
+      left: 0;
+      top: 3px;
+      content: url("../img/clock.png"); }
+  .recipes .description span.info {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #b20027; }
+    .recipes .description span.info span + span {
+      margin-left: 15px; }
+    .recipes .description span.info span.info-text {
+      font-weight: 500; }
+  .recipes .description .recipe-title {
+    color: #000000;
+    padding: 15px 0px 40px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 900; }
+  .recipes .description .button {
+    margin-left: auto; }
+
+@media (max-width: 1280px) {
+  .recipes .recipe {
+    height: 400px; }
+    .recipes .recipe:hover .description {
+      width: -webkit-calc(45% + 25px);
+      width: calc(45% + 25px);
+      padding-right: 50px; }
+  .recipes .description {
+    padding: 25px; }
+    .recipes .description .recipe-title {
+      font-size: 18px;
+      line-height: 24px; }
+    .recipes .description span.info > span {
+      display: block; }
+      .recipes .description span.info > span + span {
+        margin-left: 0; } }
+
+@media (max-width: 1024px) {
+  .recipes .recipe {
+    width: 100%; }
+  .recipes .description span.info > span {
+    display: inline-block; }
+    .recipes .description span.info > span + span {
+      margin-left: 15px; } }
+
+@media (max-width: 767px) {
+  .recipes .recipe {
+    height: 350px; }
+    .recipes .recipe:hover .description {
+      width: -webkit-calc(60% + 25px);
+      width: calc(60% + 25px); }
+  .recipes .description {
+    width: 60%; }
+    .recipes .description span.info > span {
+      display: block; }
+      .recipes .description span.info > span + span {
+        margin-left: 0; } }
+
+@media (max-width: 380px) {
+  .recipes .recipe:hover .description {
+    width: -webkit-calc(70% + 25px);
+    width: calc(70% + 25px); }
+  .recipes .description {
+    width: 70%; } }
