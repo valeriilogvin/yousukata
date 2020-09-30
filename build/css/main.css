@@ -4784,3 +4784,157 @@ button.my-slick-next {
     width: calc(70% + 25px); }
   .recipes .description {
     width: 70%; } }
+
+.sect-faq {
+  overflow: hidden;
+  position: relative; }
+  .sect-faq h2 {
+    color: #000000;
+    font-size: 40px;
+    padding-bottom: 70px;
+    position: relative; }
+    .sect-faq h2:after {
+      position: absolute;
+      content: url("../img/headline_pages_curve.png");
+      bottom: 50px;
+      left: -5px; }
+  .sect-faq .faq-block {
+    margin-bottom: 100px; }
+  .sect-faq .faq-title {
+    width: 100%;
+    position: relative; }
+    .sect-faq .faq-title h3 {
+      background: #fff;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      color: #202540;
+      font-size: 30px;
+      font-weight: 900;
+      margin-left: 65px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1; }
+    .sect-faq .faq-title span.line {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 100%;
+      height: 5px;
+      background: #131626;
+      z-index: 0; }
+  .sect-faq .pane-block {
+    position: relative; }
+    .sect-faq .pane-block:before {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      -webkit-transition: opacity .5s ease, visibility .5s ease;
+      -o-transition: opacity .5s ease, visibility .5s ease;
+      transition: opacity .5s ease, visibility .5s ease;
+      width: 200%;
+      height: 100%;
+      content: '';
+      background: #f7f7f7;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%); }
+    .sect-faq .pane-block.active:before {
+      opacity: 1;
+      visibility: visible; }
+  .sect-faq .pane_header {
+    position: relative;
+    z-index: 1;
+    padding: 40px 100px 5px 35px;
+    border-bottom: 2px #f3f3f3 solid;
+    cursor: pointer;
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px; }
+    .sect-faq .pane_header:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 4px;
+      height: 16px;
+      border-radius: 3px;
+      background: #808080;
+      right: 44px;
+      bottom: 12px;
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease; }
+    .sect-faq .pane_header:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 16px;
+      height: 4px;
+      border-radius: 3px;
+      right: 38px;
+      background: #808080;
+      bottom: 18px;
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease; }
+    .sect-faq .pane_header.active {
+      border-bottom: 2px #d27388 solid; }
+      .sect-faq .pane_header.active:after {
+        -webkit-transform-origin: 50%;
+            -ms-transform-origin: 50%;
+                transform-origin: 50%;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        background: #000000; }
+      .sect-faq .pane_header.active:before {
+        -webkit-transform-origin: 50%;
+            -ms-transform-origin: 50%;
+                transform-origin: 50%;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        background: #000000; }
+  .sect-faq .subitem {
+    padding: 40px 35px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    position: relative;
+    display: none; }
+  .sect-faq .sect-faq-img {
+    position: absolute; }
+  .sect-faq .parsley1 {
+    right: 0;
+    top: 10%; }
+  .sect-faq .parsley2 {
+    right: 0;
+    top: 33%; }
+  .sect-faq .parsley3 {
+    right: 0;
+    top: 66%; }
+  .sect-faq .tomato1 {
+    left: 0;
+    top: 25%; }
+  .sect-faq .tomato2 {
+    left: 0;
+    top: 50%; }
+  .sect-faq .tomato3 {
+    left: 0;
+    top: 75%; }
+
+@media (max-width: 767px) {
+  .sect-faq .faq-title h3 {
+    font-size: 24px; } }
+
+@media (max-width: 480px) {
+  .sect-faq .sect-faq-img {
+    display: none; } }
